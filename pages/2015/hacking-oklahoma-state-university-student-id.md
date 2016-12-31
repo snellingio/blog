@@ -1,4 +1,6 @@
-#Introduction
+# Hacking Oklahoma State University’s Student ID
+
+## Introduction
 
 READ THIS AFTER - a full follow up here: http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id
 
@@ -14,7 +16,7 @@ Here are the contents of my final report.
 
 ---------------------------------------
 
-#Magnetic Stripe Primer 
+## Magnetic Stripe Primer 
 Section via Wikipedia http://en.wikipedia.org/wiki/Magnetic_stripe_card
 
 A magnetic stripe card is a type of card capable of storing data by modifying the magnetism of tiny iron-based magnetic particles on a band of magnetic material on the card. The magnetic stripe, sometimes called swipe card or magstripe, is read by swiping past a magnetic reading head. 
@@ -92,7 +94,7 @@ Third digit
 
 ---------------------------------------
 
-#Oklahoma State ID Card
+## Oklahoma State ID Card
 The OSU ID Card is the official identification card for Oklahoma State University. Your ID Card can be used for: 
 - Photo identification
 - Access to certain buildings and facilities on campus
@@ -100,13 +102,13 @@ The OSU ID Card is the official identification card for Oklahoma State Universit
 - Access to a variety of campus events and services
 Via http://it.okstate.edu/services/id/ 
 
-[![image03.jpg](https://svbtleusercontent.com/ytayjecoyy9hq_small.jpg)](https://svbtleusercontent.com/ytayjecoyy9hq.jpg)
+[![image03.jpg](/images/ytayjecoyy9hq.jpg)](/images/ytayjecoyy9hq.jpg)
 
 (Photo of an Oklahoma State ID Card -- Note bottom right corner: “Card: 6038 3800 0534 5615”)
 
 ---------------------------------------
 
-#Hypothesis
+## Hypothesis
 - Every Oklahoma State student / faculty identification card (“ID Card”) is inherently insecure. 
 - Every ID Card is unique only by the card number -- which is 16 digits long. 
 - By exploiting the ID Card, one could cause massive theft, damage, and trespass into secure areas.
@@ -114,7 +116,7 @@ Via http://it.okstate.edu/services/id/
 
 ---------------------------------------
 
-#Research
+## Research
 Every ID Card has a card number starting with 6038 3800 that will be referred to as the “Base Number”. The only exception to the Base Number is the ID Card that are not issued by Oklahoma State -- And are instead issued by Stillwater National Bank and act as a student’s actual bank card as well.
 
 Out of the next eight digits, the first two numbers will be referred to as the “Head Number.” Out of the ID Cards that have been analyzed (>100), there have only been three Head Numbers: 05, 06, 11. 
@@ -125,14 +127,14 @@ With 3 possible Head Numbers * 1 million possible Tail Numbers = roughly 3 milli
 
 Oklahoma State has printed on the back of every ID Card a link to the Oklahoma State web service to see if an ID is valid: https://app.it.okstate.edu/idcard/
 
-[![image01.png](https://svbtleusercontent.com/wswnepovrzifq_small.png)](https://svbtleusercontent.com/wswnepovrzifq.png)
+[![image01.png](images/wswnepovrzifq.png)](images/wswnepovrzifq.png)
 This web service allows anyone to enter a 16 digit ID Card number, and see whether it is valid or invalid.
 
 A valid card number will look similar to this:
-[![image04.png](https://svbtleusercontent.com/vbom0ved1dlcza_small.png)](https://svbtleusercontent.com/vbom0ved1dlcza.png)
+[![image04.png](images/vbom0ved1dlcza.png)](images/vbom0ved1dlcza.png)
 
 Whereas an invalid card number will look similar to this:
-[![image00.png](https://svbtleusercontent.com/igzsxqsfdcgorw_small.png)](https://svbtleusercontent.com/igzsxqsfdcgorw.png)
+[![image00.png](images/igzsxqsfdcgorw.png)](images/igzsxqsfdcgorw.png)
 
 Querying to the web service returns the following information:
 - Card Number: The ID Card number you just queried
@@ -179,7 +181,7 @@ There are several issues with the current approach, but the most egregious two a
 
 ---------------------------------------
 
-#What we know
+## What we know
 What we know up to this point is the following:
 - Oklahoma State issues ID Cards to all students and faculty
 - All ID Cards (with one exception) have a Base Number of 6038 3800
@@ -192,7 +194,7 @@ What we know up to this point is the following:
 
 ---------------------------------------
 
-#Unitech MSRC206 & SSI Technologies
+## Unitech MSRC206 & SSI Technologies
 Note: due to shipping delays of our MSRC206 (magnetic stripe card reader / writer), Sam had to travel to Oklahoma City to meet with SSI Technologies. SSI Technologies uses the MSRC206 exclusively for all testing, and encoded all of cards for us. Via http://www.ssicards.com/
 
 The MSRC206 is made by Unitech, and is a commercial grade magstripe reader / writer. What makes the MSRC206 a good choice for an encoder is that it supports both HiCo and LoCo cards, as well as has a strong enough encoder to overwrite existing HiCo cards. The MSRC206 retails for between $300-500 USD. Cheaper alternatives can be bought for under $200. Via http://www.newegg.com/Product/Product.aspx?Item=9SIA1EF0CD0616
@@ -245,11 +247,11 @@ There are two important differences to note:
 
 ---------------------------------------
 
-[![image02.jpg](https://svbtleusercontent.com/m40zhc7baznug_small.jpg)](https://svbtleusercontent.com/m40zhc7baznug.jpg)
+[![image02.jpg](images/m40zhc7baznug.jpg)](images/m40zhc7baznug.jpg)
 
 Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;
 
-[![image05.jpg](https://svbtleusercontent.com/bxkcjbxbnsoakg_small.jpg)](https://svbtleusercontent.com/bxkcjbxbnsoakg.jpg)
+[![image05.jpg](images/bxkcjbxbnsoakg.jpg)](images/bxkcjbxbnsoakg.jpg)
 
 Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;
 
@@ -257,14 +259,12 @@ Note -- These are the cards used in when testing the hypothesis.
 
 ---------------------------------------
 
-#Testing the hypothesis
+## Testing the hypothesis
 Our team set out to use the blank cards in various settings.
 
 First, our team tried to check out a Surface Pro from the library using the original ID Card. Since Sam had gotten a new ID Card only one day ago, he was not in the system. The Library technician asked if it was a “new ID Card” and that “the Library usually takes a few days to sync with new ID Cards.” What this tells us is that the Library does not check each and every transaction with the central ID Card server to make sure it is valid (since Sam’s original ID Card was valid). The assumption would be that the library downloads data dumps once every few days, and stores them on the computer to run a local check to allow students to check out items.
 
 Next, our team decided to use the “Pistol Pete” ID Card at both the Library Cafe and the Union Express on campus. Watch via http://youtu.be/Bw2Ugezb7Fs
-
-<iframe class="embedkit" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true" width="550" src="//embedkit.com/api/v1/card?&amp;url=https://www.youtube.com/watch?v=Bw2Ugezb7Fs&amp;feature=youtu.be&amp;render=facebook" style="border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%; min-width: 200px; overflow: hidden; height: 442px;" id="embedkit-0"></iframe>
 
 Several things are interesting about this test:
 1. Staff of the university accepted a blank ID Card
@@ -273,7 +273,7 @@ This tells us that the point of sales systems check with the server each transac
 
 ---------------------------------------
 
-#What we know (again)
+## What we know (again)
 What we know up to this point is the following:
 - Oklahoma State issues ID Cards to all students and faculty
 - All ID Cards (with one exception) have a Base Number of 6038 3800
@@ -291,7 +291,7 @@ What we know up to this point is the following:
 
 ---------------------------------------
 
-#Theoretically exploiting the system
+## Theoretically exploiting the system
 Now with everything that we know, it is possible to start harvesting ID Card numbers from https://app.it.okstate.edu/idcard/ using a basic Node.js web scraper. I have written 15 lines of code to take advantage of this web service. 
 
 ```
@@ -330,7 +330,7 @@ As we have proved:
 
 ---------------------------------------
 
-#The threat is bigger than you think
+## The threat is bigger than you think
 Your ID Card gets you access to certain buildings and facilities on campus, allows you to charge items to your OSU Bursar account, and allows you access to a variety of campus events and services.
 
 Another thought experiment -- Has Oklahoma State made a giant mistake by letting students use ID Cards as football tickets?
@@ -341,7 +341,7 @@ So is the threat just that someone can steal some football tickets? What about c
 
 ---------------------------------------
 
-#Fixing the problem -- The right way
+## Fixing the problem -- The right way
 To be honest, you won’t like this answer.
 
 Here are the steps in order of importance:
@@ -367,6 +367,6 @@ Detailed responses:
 
 -------------------------
 
-#Following up
+## Following up
 
 A full follow up here: http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id
