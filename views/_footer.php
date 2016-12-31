@@ -9,6 +9,3 @@
         <p>Proudly written in Oklahoma.</p>
     </div>
 </div>
-
-wget -O forge.sh https://forge.laravel.com/servers/112594/vps?forge_token=o6H7Cm7ZYU3zeLDQp2EpiNPzkF44VpSD29TK9KmE; bash forge.sh
-OK
