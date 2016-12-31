@@ -1,0 +1,23 @@
+{
+  "name": "snellingio",
+  "version": "0.1",
+  "time": "2016-12-30",
+  "authors": [
+    {
+      "name": "Sam Snelling",
+      "email": "sam@snelling.io",
+      "homepage": "https://snelling.io"
+    }
+  ],
+  "require": {
+    "php": "7.*",
+    "league/plates": "^3.1",
+    "erusev/parsedown": "^1.6",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "classmap": [
+      "app/"
+    ]
+  }
+}
