@@ -2,6 +2,7 @@
 
 <a class="page" href="/whisky">Whisky Tasted In 2017</a>
 
+<hr>
 
 ## 2016
 
