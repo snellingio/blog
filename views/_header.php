@@ -133,6 +133,16 @@
         .footer {
             text-align: center;
         }
+
+        .red {
+            color: #e55235;
+            font-weight: bold;
+        }
+
+        .green {
+            color: #00AF45;
+            font-weight: bold;
+        }
     </style>
 
 </head>
