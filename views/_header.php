@@ -56,7 +56,7 @@
 
         h1:first-of-type {
             font-size: 2em;
-            margin-top:50px;
+            margin-top: 50px;
             margin-bottom: 50px;
             font-weight: 600;
         }
@@ -143,12 +143,15 @@
             font-weight: bold;
         }
 
-        p { font-size: 20px; line-height: 24px;}
+        p {
+            font-size: 20px;
+            line-height: 1.6em;
+        }
 
         a[href^="//"]:after,
         a[href^="http://"]:after,
         a[href^="https://"]:after {
-            content: url(images/external.png);
+            content: url(https://snelling.io/images/external.png);
             margin: 0 0 0 5px;
         }
 
