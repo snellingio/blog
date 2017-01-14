@@ -166,6 +166,6 @@
 
 <div class="header">
     <div class="article">
-        <h2><a href="/">Snelling.io</a></h2>
+        <h2><a href="/">Sam Snelling</a></h2>
     </div>
 </div>
