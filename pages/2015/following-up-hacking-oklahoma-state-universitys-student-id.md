@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I published a pretty lengthy report “Hacking Oklahoma State University’s Student ID” on Sunday that I originally wrote in 2013. You can see the original post here: [http://snelling.io/hacking-oklahoma-state-university-student-id]
+I published a pretty lengthy report “Hacking Oklahoma State University’s Student ID” on Sunday that I originally wrote in 2013. You can see the original post here: http://snelling.io/hacking-oklahoma-state-university-student-id
 
 In two days, it was posted to Hacker News, Reddit /r/Netsec, and other sites that generated over 17,000 page views with hundreds of shares on Twitter and Facebook. Hindsight 20/20, I should have titled the report something differently to keep my Alma mater out of the headlines. With that said, the response from the community has been overwhelmingly positive, with several other University’s now auditing their own systems.
 
