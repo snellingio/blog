@@ -1,4 +1,4 @@
-<?php $this->insert('_header') ?>
+<?php $this->insert('_header', ['title' => $title ?? 'Sam Snelling']) ?>
 
 <div class="article">
     <?= $markdown ?>
