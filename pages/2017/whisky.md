@@ -1,4 +1,4 @@
-# Whisky Tasted In 2017
+# Whisky, 2017
 
 Personal goal to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) who sell wonderful 3cl samples.
