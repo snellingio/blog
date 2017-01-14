@@ -36,7 +36,6 @@
 
         h1, h2 {
             font-size: 1.5em;
-            margin-bottom: 0;
             line-height: 1.25;
             font-weight: 500;
         }
