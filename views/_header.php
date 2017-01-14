@@ -21,12 +21,12 @@
         }
 
         a {
+            color: #36b;
             overflow-wrap: break-word;
             word-wrap: break-word;
         }
 
         a.page {
-            color: #509EE3;
             font-size: 1.3em;
         }
 
@@ -134,14 +134,30 @@
             text-align: center;
         }
 
-        .red {
-            color: #e55235;
+        .red, .red a {
+            color: #e55235 !important;
             font-weight: bold;
         }
 
-        .green {
-            color: #00AF45;
+        .green, .green a {
+            color: #00AF45 !important;
             font-weight: bold;
+        }
+
+        p { font-size: 20px; line-height: 24px;}
+
+        a[href^="//"]:after,
+        a[href^="http://"]:after,
+        a[href^="https://"]:after {
+            content: url(images/external.png);
+            margin: 0 0 0 5px;
+        }
+
+        a[href^="//snelling.io/"]:after,
+        a[href^="http://snelling.io/"]:after,
+        a[href^="https://snelling.io/"]:after {
+            content: '';
+            margin: 0;
         }
     </style>
 
