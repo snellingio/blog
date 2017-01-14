@@ -167,14 +167,5 @@
 <div class="header">
     <div class="article">
         <h2><a href="/">Snelling.io</a></h2>
-        <div>
-            <p>
-                I’m <a href="https://twitter.com/snellingio" rel="author">Sam Snelling</a>: a programmer, business guy,
-                nerd, and caffeine junkie.
-            </p>
-            <p>
-                pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4
-            </p>
-        </div>
     </div>
 </div>
