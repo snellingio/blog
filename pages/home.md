@@ -2,6 +2,8 @@
 
 <a class="page" href="/resolutions">Resolutions & Goals For 2017</a>
 
+<a class="page" href="/beer">Beer, 2017</a>
+
 <a class="page" href="/whisky">Whisky, 2017</a>
 
 <hr>

@@ -26,8 +26,8 @@
 - Read five books cover to cover
 - [Taste 50 different whiskeys](/whisky)
     - Currently 30/50
-- Taste 100 different beers
-    - Currently 10/100
+- [Taste 100 different beers](/beer)
+    - Currently 14/100
 - Try ten different sushi rolls with raw fish
     - Currently 3/10
     - Salmon

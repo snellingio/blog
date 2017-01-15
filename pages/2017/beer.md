@@ -1,0 +1,34 @@
+# Beer, 2017
+
+Personal goal to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
+I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com/) where you can learn more about each.
+
+<strong>Current status: 14/100</strong>
+
+Tasted in 2017:
+
+* [Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)
+* [Anthem Golden One](https://www.ratebeer.com/beer/anthem-golden-one/174969/)
+* [Avery IPA](https://www.ratebeer.com/beer/avery-ipa/67/)
+* [Black Mesa Kolsch](https://www.ratebeer.com/beer/black-mesa-kolsch/364874/)
+* [BridgePort Ebenezer Ale](https://www.ratebeer.com/beer/bridgeport-ebenezer-ale/10485/)
+* [COOP Ale Works Elevator Wheat](https://www.ratebeer.com/beer/coop-ale-works-elevator-wheat/315695/)
+* <span class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</span>
+* [COOP Ale Works Oktoberfest](https://www.ratebeer.com/beer/coop-ale-works-oktoberfest/108542/)
+* [Deshutes Hop Slice Session IPA](https://www.beeradvocate.com/beer/profile/63/212089/)
+* <span class="green">[Rouge Dead Guy Ale](https://www.ratebeer.com/beer/rogue-dead-guy-ale/589/)</span>
+* [Sam Adams Winter Lager](https://www.ratebeer.com/beer/samuel-adams-winter-lager/168/)
+* [Sapporo Draft Beer](https://www.ratebeer.com/beer/sapporo-draft-beer--premium-beer/729/)
+* [Spaten Optimator](https://www.ratebeer.com/beer/spaten-optimator/2094/)
+* [Stella Artois](https://www.ratebeer.com/beer/stella-artois/1478/) 
+
+
+Current favorite:
+
+* COOP Ale Works F5 IPA
+
+
+Special thanks to:
+
+* Rachel, for putting up with all my tasting
+* [Gary Mayden](https://twitter.com/@gmayden) for letting me taste several of his beers
