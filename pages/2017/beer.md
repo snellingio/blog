@@ -7,7 +7,7 @@ I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com
 
 Tasted in 2017:
 
-* [Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)
+* <span class="red">[Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)</span>
 * [Anthem Golden One](https://www.ratebeer.com/beer/anthem-golden-one/174969/)
 * [Avery IPA](https://www.ratebeer.com/beer/avery-ipa/67/)
 * [Black Mesa Kolsch](https://www.ratebeer.com/beer/black-mesa-kolsch/364874/)
