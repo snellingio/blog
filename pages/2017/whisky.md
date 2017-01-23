@@ -3,13 +3,14 @@
 Personal goal to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
-<strong>Current status: 29/50</strong>
+<strong>Current status: 30/50</strong>, as of <i>January 22nd</i>
 
 Tasted in 2017:
 
 * [Balvenie 14 Year Old Caribbean Cask](https://www.masterofmalt.com/whiskies/balvenie/balvenie-14-year-old-caribbean-cask-whisky/)
 * [Balvenie DoubleWood 12 Year Old](https://www.masterofmalt.com/whiskies/balvenie/balvenie-doublewood-12-year-old-whisky/)
 * <span class="red">Crown Royal Regal Apple</span>
+* [Dewar's White Label](https://www.masterofmalt.com/whiskies/dewars-blended-scotch-whisky/)
 * Evan Williams Kentucky Bourbon
 * <span class="red">[Fujikai 10 Year Old](https://www.masterofmalt.com/whiskies/monde-shuzo/fujikai-10-year-old-whisky/)</span>
 * [Glenmorangie Nectar D'Or - 12 Year Old](https://www.masterofmalt.com/whiskies/glenmorangie-nectar-dor-12-year-old-whisky/)

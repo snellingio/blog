@@ -27,11 +27,11 @@
 - [Taste 50 different whiskeys](/whisky)
     - Currently 30/50
 - [Taste 100 different beers](/beer)
-    - Currently 14/100
+    - Currently 18/100
 - Try ten different sushi rolls with raw fish
     - Currently 3/10
     - Salmon
-    - Spicy Tuna
+    - Tuna
     - Yellowtail
 - Bake ten different loaves of bread
     - Currently 2/10
@@ -42,7 +42,11 @@
 - Give one public talk at local user group
 - Try Peking duck
 - Watch / re-watch ten tv shows
-    - Currently 0/10
+    - Currently 1/10
+    - Watched [The Newsroom](http://www.imdb.com/title/tt1870479/)
     - Rewatching [Eureka](http://www.imdb.com/title/tt0796264/)
     - Rewatching [Terra Nova](http://www.imdb.com/title/tt1641349/)
     - Rewatching [Seinfeld](http://www.imdb.com/title/tt0098904/)
+    
+    
+Updated <i>January 22nd</i>
