@@ -11,7 +11,7 @@ Tasted in 2017:
 * [Balvenie DoubleWood 12 Year Old](https://www.masterofmalt.com/whiskies/balvenie/balvenie-doublewood-12-year-old-whisky/)
 * <span class="red">Crown Royal Regal Apple</span>
 * [Dewar's White Label](https://www.masterofmalt.com/whiskies/dewars-blended-scotch-whisky/)
-* Evan Williams Kentucky Bourbon
+* [Evan Williams Extra Aged](https://www.masterofmalt.com/whiskies/heaven-hill/evan-williams-extra-aged-whiskey/)
 * <span class="red">[Fujikai 10 Year Old](https://www.masterofmalt.com/whiskies/monde-shuzo/fujikai-10-year-old-whisky/)</span>
 * [Glenmorangie Nectar D'Or - 12 Year Old](https://www.masterofmalt.com/whiskies/glenmorangie-nectar-dor-12-year-old-whisky/)
 * [Glenfiddich 12 Year Old](https://www.masterofmalt.com/whiskies/glenfiddich-12-year-old-whisky/)  

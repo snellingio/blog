@@ -15,7 +15,7 @@ Tasted in 2017:
 * [COOP Ale Works Elevator Wheat](https://www.ratebeer.com/beer/coop-ale-works-elevator-wheat/315695/)
 * <span class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</span>
 * [COOP Ale Works Oktoberfest](https://www.ratebeer.com/beer/coop-ale-works-oktoberfest/108542/)
-* [Deschutes Black Butte Porter](https://www.ratebeer.com/beer/deschutes-black-butte-porter/2125/)
+* <span class="green">[Deschutes Black Butte Porter](https://www.ratebeer.com/beer/deschutes-black-butte-porter/2125/)</span>
 * [Deschutes Hop Slice Session IPA](https://www.beeradvocate.com/beer/profile/63/212089/)
 * [Dos Equis XX Special Lager](https://www.ratebeer.com/beer/dos-equis-xx-special-lager/225/)
 * [Modelo Especial](https://www.ratebeer.com/beer/modelo-especial/744/)
@@ -24,7 +24,7 @@ Tasted in 2017:
 * [Sapporo Draft Beer](https://www.ratebeer.com/beer/sapporo-draft-beer--premium-beer/729/)
 * [Spaten Optimator](https://www.ratebeer.com/beer/spaten-optimator/2094/)
 * [Stella Artois](https://www.ratebeer.com/beer/stella-artois/1478/) 
-* [Tecate Light](https://www.ratebeer.com/beer/tecate-light/227/)
+* <span class="red">[Tecate Light](https://www.ratebeer.com/beer/tecate-light/227/)</span>
 
 
 Current favorite:
