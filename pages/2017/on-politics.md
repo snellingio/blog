@@ -2,12 +2,8 @@
 
 I have been off-the-record when it comes to my political views. In fact, I've been pretty vocal in the past that individuals should be incredibly _careful_ when talking about politics on the internet. 
 
-With that said, now more than ever in America I believe it is important to have honest, nonconfrontational discussions about moving forward. Not just about here in the next four years, but moving forward in the next two, three, four decades to come.
-
-I regret not being more open and honest with family members and friends. I understand that many are screaming for change in one direction or the other. "Screw politicians!" many are screaming. I empathize. However, I'm convinced the only path to success is to have a real plan in place. While I'm not going to be the one to lobby a specific plan, I can be very honest about what I _believe_.
-
-Here's my pledge: if you decide to have a discussion about politics with me, and you are reasonable, I promise to have an honest, nonconfrontational discussion. To be clear, I'm not here to argue over who was a better candidate in the previous election cycle.
-
+If you decide to have a discussion about politics with me, and you are reasonable, I promise to have an honest, nonconfrontational discussion. If we share a common positive outcome for our country, we should be able to reasonably discuss this and figure out how we all keep moving forward. 
+ 
 For what it's worth, I do not anticipate writing any more on politics. 
 
 I believe:
