@@ -13,7 +13,7 @@ I believe:
 - I believe that America's debt is real
 - I believe in a strong local government
 - I believe in respect for public servants - including the police, firefighters, veterans, etc
-- I believe in a strong right to privacy. Including from the Government
+- I believe in a strong right to privacy
 - I believe in helping others financially, socially, and in health - including the poor, the sick, the elderly, veterans, etc
 - I believe in women's health. I believe in men's health. I believe that there should be a baseline of well-being - such as cancer screenings and treatment, reproductive health, mental health, maternal health, HIV, sexually transmitted diseases, noncommunicable diseases, and any other form of illness - available to be taken advantage of by anyone without declaring bankruptcy
 - I believe it is woman’s right to decide whether or not to abort a pregnancy
