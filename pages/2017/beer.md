@@ -36,3 +36,4 @@ Special thanks to:
 
 * Rachel, for putting up with all my tasting
 * [Gary Mayden](https://twitter.com/@gmayden) for letting me taste several of his beers
+* [Josh Bavari](https://twitter.com/@jbavari) for the Avery IPA

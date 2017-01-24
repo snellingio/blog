@@ -8,7 +8,7 @@ define('PAGES_DIR', __DIR__ . '/pages');
 
 $path = (new App\Server)->path();
 
-$file  = '';
+$file     = '';
 $template = '_markdown';
 
 if (empty($path)) {
@@ -25,7 +25,6 @@ if (empty($file) && file_exists(PAGES_DIR . '/2016/' . $path . '.md')) {
 
 if (empty($file) && file_exists(PAGES_DIR . '/2017/' . $path . '.md')) {
     $file = PAGES_DIR . '/2017/' . $path . '.md';
-
 }
 
 if (empty($file)) {
