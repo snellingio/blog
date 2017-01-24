@@ -26,5 +26,3 @@ I believe ...
 - automation will take a majority percentage of lower class jobs in the next 20-100 years, and we need to ensure a standard of living when this comes
 - self-driving vehicles will save hundreds of thousands of lives around the world, and the government should be actively encouraging research
 - Nazi's, Neo-Nazi's, the Alt-Right, or any group actively seeking the persecution of other people over age, race, gender, or religion should be considered terrorists
-
-I do not anticipate writing any more on politics.
