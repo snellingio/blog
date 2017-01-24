@@ -6,7 +6,7 @@ If you decide to have a discussion about politics with me, and you are reasonabl
  
 For what it's worth, I do not anticipate writing any more on politics. 
 
-I believe
+I believe ...
 - in common sense realities
 - in market solutions 
 - it is a necessity to defend ourselves against a dangerous world
