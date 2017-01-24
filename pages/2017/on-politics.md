@@ -1,10 +1,8 @@
 # On Politics
 
-I have been off-the-record when it comes to my political views. In fact, I've been pretty vocal in the past that individuals should be incredibly _careful_ when talking about politics on the internet. 
+I have been off-the-record when it comes to my political views. I regret not being more honest with friends and family.
 
 If you decide to have a discussion about politics with me, and you are reasonable, I promise to have an honest, nonconfrontational discussion. If we share a common positive outcome for our country, we should be able to reasonably discuss this and figure out how we all keep moving forward. 
- 
-For what it's worth, I do not anticipate writing any more on politics. 
 
 I believe ...
 - in common sense realities
@@ -28,3 +26,5 @@ I believe ...
 - that automation will take a majority percentage of lower class jobs in the next 20-100 years, and we need to ensure a standard of living when this comes
 - that self-driving vehicles will save hundreds of thousands of lives around the world, and the government should be actively encouraging research
 - Nazi's, Neo-Nazi's, the Alt-Right, or any group actively seeking the persecution of other people over age, race, gender, religion, etc should be considered terrorists
+
+I do not anticipate writing any more on politics.
