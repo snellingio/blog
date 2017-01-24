@@ -20,9 +20,8 @@ I believe:
 - I believe in equal rights and protections for all - including women, LGBT, non-white, minorities & immigrants, etc
 - I believe that we should welcome refugees with open arms
 - I believe that Freedom of Religion applies to all religions - including non-Judeo-Christian religions
-- I believe in education. And while I believe that higher education has serious flaws, I believe America has a duty to become as educated as possible
 - I believe in scientific research and the consensus of the scientific community
-- I believe that humans are changing the climate of the world. I believe that we must try and protect the earth
+- I believe that humans are changing the climate of the world, and that we have a duty to protect the earth
 - I believe that renewable energy should be invested in and looked at as a core part of our infrastructure 
 - I believe that the economics of prison and the death penalty does not make sense
 - I believe the internet is a public asset that needs to be preserved
