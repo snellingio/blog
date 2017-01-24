@@ -12,6 +12,7 @@ I believe:
 - I believe it is a necessity to defend ourselves against a dangerous world
 - I believe that America's debt is real
 - I believe in a strong local government
+- I believe education is vital to our long-term success
 - I believe in respect for public servants - including the police, firefighters, veterans, etc
 - I believe in a strong right to privacy
 - I believe in helping others financially, socially, and in health - including the poor, the sick, the elderly, veterans, etc
