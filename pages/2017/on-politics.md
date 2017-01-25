@@ -15,7 +15,7 @@ I believe ...
 - in helping others financially, socially, and in health - including the poor, the sick, the elderly, veterans, etc
 - in a baseline of well-being - such as cancer screenings and treatment, reproductive health, mental health, maternal health, HIV, sexually transmitted diseases, noncommunicable diseases, and any other form of illness - available to be taken advantage of by anyone without declaring bankruptcy
 - it is woman’s right to decide whether or not to abort a pregnancy
-- in equal rights and protections for all - including women, LGBT, non-white, minorities & immigrants, etc
+- in equal rights and protections for all - including women, LGBT, non-white, minorities and immigrants, etc
 - we should welcome refugees with open arms
 - Freedom of Religion applies to all religions - including those not rooted in Judeo-Christian values
 - in scientific research and the consensus of the scientific community
@@ -23,6 +23,6 @@ I believe ...
 - renewable energy should be invested in and looked at as a core part of our infrastructure 
 - life sentences for nonviolent crimes and the death penalty do not make economic sense
 - the internet is a public asset
-- automation will take a majority percentage of lower class jobs in the next 20-100 years, and we need to ensure a standard of living when this comes
+- automation will take a majority percentage of lower class jobs in the next 20-100 years, and we need to ensure a minimum standard of living when that happens
 - self-driving vehicles will save hundreds of thousands of lives around the world, and the government should be actively encouraging research
 - Nazi's, Neo-Nazi's, the Alt-Right, or any group actively seeking the persecution of other people over age, race, gender, or religion should be considered terrorists
