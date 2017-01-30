@@ -12,7 +12,7 @@ Tasted in 2017:
 * [Avery IPA](https://www.ratebeer.com/beer/avery-ipa/67/)
 * [BJ’s HopStorm IPA](https://www.ratebeer.com/beer/bjs-hopstorm-ipa/172606/)
 * [Black Mesa Kolsch](https://www.ratebeer.com/beer/black-mesa-kolsch/364874/)
-* <span class="green">[Boulevard Smokestack Series: Tank 7 Farmhouse Ale](https://www.ratebeer.com/beer/boulevard-smokestack-series-tank-7-farmhouse-ale/102933/)<s/pan>
+* <span class="green">[Boulevard Smokestack Series: Tank 7 Farmhouse Ale](https://www.ratebeer.com/beer/boulevard-smokestack-series-tank-7-farmhouse-ale/102933/)</span>
 * [BridgePort Ebenezer Ale](https://www.ratebeer.com/beer/bridgeport-ebenezer-ale/10485/)
 * [COOP Ale Works Elevator Wheat](https://www.ratebeer.com/beer/coop-ale-works-elevator-wheat/315695/)
 * <span class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</span>
