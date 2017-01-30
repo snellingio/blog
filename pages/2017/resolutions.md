@@ -25,9 +25,9 @@
     - Five on watches
 - Read five books cover to cover
 - [Taste 50 different whiskeys](/whisky)
-    - Currently 30/50
+    - Currently 34/50
 - [Taste 100 different beers](/beer)
-    - Currently 18/100
+    - Currently 21/100
 - Try ten different sushi rolls with raw fish
     - Currently 3/10
     - Salmon
@@ -42,11 +42,13 @@
 - Give one public talk at local user group
 - Try Peking duck
 - Watch / re-watch ten tv shows
-    - Currently 1/10
+    - Currently 3/10
     - Watched [The Newsroom](http://www.imdb.com/title/tt1870479/)
+    - Rewatched [The IT Crowd](http://www.imdb.com/title/tt0487831/)
+    - Rewatched [Seinfeld](http://www.imdb.com/title/tt0098904/)
     - Rewatching [Eureka](http://www.imdb.com/title/tt0796264/)
     - Rewatching [Terra Nova](http://www.imdb.com/title/tt1641349/)
-    - Rewatching [Seinfeld](http://www.imdb.com/title/tt0098904/)
+   
     
     
-Updated <i>January 22nd</i>
+Updated <i>January 29th</i>
