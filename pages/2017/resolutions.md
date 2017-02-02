@@ -25,7 +25,7 @@
     - Five on watches
 - Read five books cover to cover
 - [Taste 50 different whiskeys](/whisky)
-    - Currently 34/50
+    - Currently 39/50
 - [Taste 100 different beers](/beer)
     - Currently 21/100
 - Try ten different sushi rolls with raw fish
@@ -51,4 +51,4 @@
    
     
     
-Updated <i>January 29th</i>
+Updated <i>February 2nd</i>

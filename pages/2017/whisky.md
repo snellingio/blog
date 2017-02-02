@@ -3,12 +3,16 @@
 Personal goal to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
-<strong>Current status: 34/50</strong>, as of <i>January 29th</i>
+<strong>Current status: 39/50</strong>, as of <i>February 2nd</i>
 
 Tasted in 2017:
 
+* [Arran 14 Year Old](https://www.masterofmalt.com/whiskies/arran/arran-14-year-old-whisky/)
+* [Auchentoshan 16 Year Old 1997 - Distiller's Art (Langside)](https://www.masterofmalt.com/whiskies/auchentoshan/auchentoshan-16-year-old-1997-distillers-art-langside-whisky/)
 * [Balvenie 14 Year Old Caribbean Cask](https://www.masterofmalt.com/whiskies/balvenie/balvenie-14-year-old-caribbean-cask-whisky/)
 * [Balvenie DoubleWood 12 Year Old](https://www.masterofmalt.com/whiskies/balvenie/balvenie-doublewood-12-year-old-whisky/)
+* <span class="green">[BenRiach 15 Year Old (Pedro Ximénez Sherry Cask Finish)](https://www.masterofmalt.com/whiskies/benriach-15-year-old-pedro-ximinez-sherry-cask-finish-whisky/)</span>
+* [Benrinnes 15 Year Old - Flora and Fauna](https://www.masterofmalt.com/whiskies/benrinnes-15-year-old-whisky/)
 * <span class="red">Crown Royal Regal Apple</span>
 * [Dewar's White Label](https://www.masterofmalt.com/whiskies/dewars-blended-scotch-whisky/)
 * [Evan Williams Extra Aged](https://www.masterofmalt.com/whiskies/heaven-hill/evan-williams-extra-aged-whiskey/)
@@ -27,6 +31,7 @@ Tasted in 2017:
 * <span class="green">[Johnnie Walker King George V](https://www.masterofmalt.com/whiskies/johnnie-walker/johnnie-walker-king-george-v-whisky/)</span>
 * [Johnnie Walker Red](https://www.masterofmalt.com/whiskies/johnnie-walker-red-label-whisky/)
 * [Knob Creek 9 Year Old](https://www.masterofmalt.com/whiskies/knob-creek-small-batch-9-year-old-whiskey/)
+* [Lagavulin 12 Year Old 200th Anniversary (Special Release 2016)](https://www.masterofmalt.com/whiskies/lagavulin/lagavulin-12-year-old-200th-anniversary-special-release-2016-whisky/)
 * <span class="green">[Lagavulin 16](https://www.masterofmalt.com/whiskies/lagavulin/lagavulin-16-year-old-whisky/)</span>
 * <span class="green">[Lagavulin 2000 - Distillers Edition](https://www.masterofmalt.com/whiskies/lagavulin/lagavulin-2000-bottled-2016-pedro-ximenez-cask-finish-distillers-edition-whisky/)</span>
 * [Macallan 12 Year Old Sherry Oak](https://www.masterofmalt.com/whiskies/the-macallan-12-year-old-sherry-oak-whisky/)
