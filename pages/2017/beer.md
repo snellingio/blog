@@ -5,6 +5,11 @@ I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com
 
 <strong>Current status: 21/100</strong>, as of <i>January 29th</i>
 
+
+Current favorite:
+
+* <strong class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</span>
+
 Tasted in 2017:
 
 * <span class="red">[Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)</span>
@@ -28,11 +33,6 @@ Tasted in 2017:
 * [Spaten Optimator](https://www.ratebeer.com/beer/spaten-optimator/2094/)
 * <span class="red">[Stella Artois](https://www.ratebeer.com/beer/stella-artois/1478/)</span>
 * <span class="red">[Tecate Light](https://www.ratebeer.com/beer/tecate-light/227/)</span>
-
-
-Current favorite:
-
-* COOP Ale Works F5 IPA
 
 
 Special thanks to:
