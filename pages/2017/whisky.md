@@ -6,9 +6,11 @@ I have included links, where applicable, to [Masters of Malt](https://www.master
 <strong>Current status: 43/50</strong>, as of <i>February 3rd</i>
 
 Current favorite overall:
-* <strong class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)<strong>
+
+* <strong class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)</strong>
 
 My favorites, weighing value for money:
+
 * <strong class="green">[Glenlivet 18 Year Old](https://www.masterofmalt.com/whiskies/the-glenlivet-18-year-old-whisky/)</strong>
 * <strong class="green">[Nikka Coffey Grain Whisky](https://www.masterofmalt.com/whiskies/nikka/nikka-coffey-grain-whisky-70cl/)</strong>
 * <strong class="green">[Nikka Pure Malt Red](https://www.masterofmalt.com/whiskies/nikka-pure-malt-red-whisky/)</strong>
