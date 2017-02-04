@@ -8,7 +8,7 @@ I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com
 
 Current favorite:
 
-* <strong class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</strong>
+* <span class="green">[COOP Ale Works F5 IPA](https://www.ratebeer.com/beer/coop-ale-works-f5-ipa/120665/)</span>
 
 Tasted in 2017:
 

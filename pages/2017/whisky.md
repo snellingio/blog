@@ -7,15 +7,15 @@ I have included links, where applicable, to [Masters of Malt](https://www.master
 
 Current favorite overall:
 
-* <strong class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)</strong>
+* <span class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)</span>
 
 My favorites, weighing value for money:
 
-* <strong class="green">[Glenlivet 18 Year Old](https://www.masterofmalt.com/whiskies/the-glenlivet-18-year-old-whisky/)</strong>
-* <strong class="green">[Nikka Coffey Grain Whisky](https://www.masterofmalt.com/whiskies/nikka/nikka-coffey-grain-whisky-70cl/)</strong>
-* <strong class="green">[Nikka Pure Malt Red](https://www.masterofmalt.com/whiskies/nikka-pure-malt-red-whisky/)</strong>
-* <strong class="green">[Lagavulin 16](https://www.masterofmalt.com/whiskies/lagavulin/lagavulin-16-year-old-whisky/)</strong>
-* <strong class="green">[Port Askaig 100° Proof (Speciality Drinks)](https://www.masterofmalt.com/whiskies/speciality-drinks/port-askaig-100-proof-speciality-drinks-whisky/)</strong>
+* <span class="green">[Glenlivet 18 Year Old](https://www.masterofmalt.com/whiskies/the-glenlivet-18-year-old-whisky/)</span>
+* <span class="green">[Nikka Coffey Grain Whisky](https://www.masterofmalt.com/whiskies/nikka/nikka-coffey-grain-whisky-70cl/)</span>
+* <span class="green">[Nikka Pure Malt Red](https://www.masterofmalt.com/whiskies/nikka-pure-malt-red-whisky/)</span>
+* <span class="green">[Lagavulin 16](https://www.masterofmalt.com/whiskies/lagavulin/lagavulin-16-year-old-whisky/)</span>
+* <span class="green">[Port Askaig 100° Proof (Speciality Drinks)](https://www.masterofmalt.com/whiskies/speciality-drinks/port-askaig-100-proof-speciality-drinks-whisky/)</span>
 
 
 Tasted in 2017:
