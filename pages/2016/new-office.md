@@ -2,20 +2,20 @@
 
 In 2012 I lived in a two bedroom, 500sqft apartment with one of my best friends. In 2013, I moved in with my (then future) wife. In late 2014, we moved to Edmond Oklahoma where we rented a house, and started a software development business together. Fast forward to 2016, where we are now living in our new house. 
 
-[![Original_captioned.jpg](images/l7oiai8ws657q.jpg)](images/l7oiai8ws657q.jpg)
+[![](images/l7oiai8ws657q.jpg)](images/l7oiai8ws657q.jpg)
 
 One of the biggest perks about building a house (and working from home), is figuring out exactly what you want to do with your working space. It’s been a long time coming, but I finally have an office to be proud of.
 
-[![construction.jpg](images/kh6nmtouloysa.jpg)](images/kh6nmtouloysa.jpg)
+[![](images/kh6nmtouloysa.jpg)](images/kh6nmtouloysa.jpg)
 
 # The Homelab
 
 (Edit: Here is the most up to date photo)
-[![IMG_1167.jpg](images/uoh3ivsg4s7w.jpg)](images/uoh3ivsg4s7w.jpg)
+[![](images/uoh3ivsg4s7w.jpg)](images/uoh3ivsg4s7w.jpg)
 
-[![IMG_0907.jpg](images/lksehkh6fjqg.jpg)](images/lksehkh6fjqg.jpg)
+[![](images/lksehkh6fjqg.jpg)](images/lksehkh6fjqg.jpg)
 
-[![IMG_0910.jpg](images/gyteg2bewepfq.jpg)](images/gyteg2bewepfq.jpg)
+[![](images/gyteg2bewepfq.jpg)](images/gyteg2bewepfq.jpg)
 
 ## Rack & shelf
 - [Skeletek 12U Rack](http://www.dantraknet.com/item/120)
@@ -58,9 +58,9 @@ I’ve been tinkering around with Raspberry Pi’s for a while now. The Raspberr
 
 # The Battlestation
 
-[![IMG_0912.jpg](images/rrjjltk8fyguia.jpg)](images/rrjjltk8fyguia.jpg)
+[![](images/rrjjltk8fyguia.jpg)](images/rrjjltk8fyguia.jpg)
 
-[![IMG_0913.jpg](images/yiar2jjp1mcig.jpg)](images/yiar2jjp1mcig.jpg)
+[![](images/yiar2jjp1mcig.jpg)](images/yiar2jjp1mcig.jpg)
 
 ## Desks
 - [8’ Gladiator Adjustable Height Workbench](http://www.gladiatorgarageworks.com/products-1/workbenches-2/workbenches-3/-[GAWB08BAZW]-1700181/GAWB08BAZW/)
