@@ -175,6 +175,6 @@
 <div class="header">
     <div class="article">
         <h2><a href="/">Sam Snelling</a></h2>
-        <p><i>The John Wick of PHP</i></p>
+        <p><i>The John Wick of PHP Software Development</i></p>
     </div>
 </div>
