@@ -1,5 +1,7 @@
 ## 2017
 
+<a class="page" href="/pattern-parser">Pattern Parsing</a>
+
 <a class="page" href="/on-politics">On Politics</a>
 
 <a class="page" href="/resolutions">Resolutions & Goals For 2017</a>

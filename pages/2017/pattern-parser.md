@@ -1,10 +1,10 @@
 # Pattern Parser
 
-Recently, I have published a pattern parsing library which you can find on Github (https://github.com/snellingio/pattern-parser).
+Recently, I published a pattern parsing library which you can find on Github (https://github.com/snellingio/pattern-parser).
 
-While it was built as quick way to start testing NLP phrases (look at wit.ai), it offers a lot of power with none of the complexity of regular expressions.
+Originally built as a way to start testing NLP phrases, it offers a lot of power without the complexity of regular expressions.
 
-Say you wanted to build a slash command to estimate how long a particular task would take in hours and minutes, rounded to the nearest 15 minutes.
+Say you wanted to build a slash command to `/estimate` how long a particular task would take in hours and minutes, rounded to the nearest 15 minutes.
 
 How would you parse this?
 ```angular2html

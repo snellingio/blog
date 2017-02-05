@@ -114,10 +114,28 @@
         pre code {
             padding: 0;
             font-size: inherit;
-            color: inherit;
-            white-space: pre-wrap;
-            background-color: transparent;
             border-radius: 0;
+            color: #000;
+            background: transparent 0 0;
+            text-shadow: 0 1px #fff;
+            font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+        }
+
+        code {
+
         }
 
         img {
@@ -169,7 +187,6 @@
         }
     </style>
 
-</head>
 <body>
 
 <div class="header">
