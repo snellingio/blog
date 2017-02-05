@@ -95,6 +95,7 @@ One of our last days there we rented a bed on the beach. Amazing! This day went 
 [![](images/mexico/akumal027.jpg)](images/mexico/akumal027.jpg)
 
 As you may or may not know, Rachel's Christmas / birthday gift from me was a telescope, as she wants to start learning about astrophotography. While we didn't have a telescope, we couldn't help trying to get a couple of shots of the stars.
+
 [![](images/mexico/akumal028.jpg)](images/mexico/akumal028.jpg)
 
 Every night the resort put on a "show." We skipped them until the very last night because the show was titled "The Beatles."
