@@ -23,7 +23,19 @@ vs this
 /estimate 3 h 20 min
 ```
 
-Instead of writing a complex regular expression, let's just normalize the string, pattern parse, and do some math.
+Using the pattern parsing library, we can just make a simple parsing rule like so:
+
+```php
+$string       = '3h 20m';
+$patternParser = new OnROI\PatternParser\PatternParser();
+
+// You can match any pattern you want!
+$parsed_hours_minutes = $patternParser->process($string, '{hours}h {minutes}m');
+$parsed_hours         = $patternParser->process($string, '{hours}h');
+$parsed_minutes       = $patternParser->process($string, '{minutes}m');
+```
+
+Let's put it together to fit the original business goal. Instead of writing a complex regular expression, let's just normalize the string, pattern parse, and do some math.
 
 ```php
 $comment       = '/estimate 3 h 20 min';
