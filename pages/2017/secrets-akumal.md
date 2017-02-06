@@ -30,7 +30,7 @@ Rachel & I's second anniversary.
 
 [![](images/mexico/akumal009.jpg)](images/mexico/akumal009.jpg)
 
-[![](images/mexico/akumal010.jpg)](images/mexico/akumal01.jpg)
+[![](images/mexico/akumal010.jpg)](images/mexico/akumal010.jpg)
 
 [![](images/mexico/akumal011.jpg)](images/mexico/akumal011.jpg)
 
