@@ -3,7 +3,7 @@
 Personal goal to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com/) where you can learn more about each.
 
-<strong>Current status: 21/100</strong>, as of <i>January 29th</i>
+<strong>Current status: 22/100</strong>, as of <i>February 5th</i>
 
 
 Current favorite:
@@ -15,6 +15,7 @@ Tasted in 2017:
 * <span class="red">[Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)</span>
 * [Anthem Golden One](https://www.ratebeer.com/beer/anthem-golden-one/174969/)
 * [Avery IPA](https://www.ratebeer.com/beer/avery-ipa/67/)
+* [Big Sky IPA](https://www.ratebeer.com/beer/big-sky-ipa/35164/)
 * [BJ’s HopStorm IPA](https://www.ratebeer.com/beer/bjs-hopstorm-ipa/172606/)
 * [Black Mesa Kolsch](https://www.ratebeer.com/beer/black-mesa-kolsch/364874/)
 * <span class="green">[Boulevard Smokestack Series: Tank 7 Farmhouse Ale](https://www.ratebeer.com/beer/boulevard-smokestack-series-tank-7-farmhouse-ale/102933/)</span>

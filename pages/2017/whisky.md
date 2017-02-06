@@ -3,7 +3,7 @@
 Personal goal to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
-<strong>Current status: 43/50</strong>, as of <i>February 3rd</i>
+<strong>Current status: 47/50</strong>, as of <i>February 5th</i>
 
 Current favorite overall:
 
@@ -20,12 +20,15 @@ My favorites, weighing value for money:
 
 Tasted in 2017:
 
+* <span class="green">[Ailsa Bay Single Malt](https://www.masterofmalt.com/whiskies/ailsa-bay/ailsa-bay-single-malt-whisky/)</span>
 * [Arran 14 Year Old](https://www.masterofmalt.com/whiskies/arran/arran-14-year-old-whisky/)
+* <span class="green">[Arran Robert Burns Single Malt](https://www.masterofmalt.com/whiskies/arran/robert-burns-robert-burns-single-malt-whisky/)</span>
 * [Auchentoshan 16 Year Old 1997 - Distiller's Art (Langside)](https://www.masterofmalt.com/whiskies/auchentoshan/auchentoshan-16-year-old-1997-distillers-art-langside-whisky/)
 * [Balvenie 14 Year Old Caribbean Cask](https://www.masterofmalt.com/whiskies/balvenie/balvenie-14-year-old-caribbean-cask-whisky/)
 * [Balvenie DoubleWood 12 Year Old](https://www.masterofmalt.com/whiskies/balvenie/balvenie-doublewood-12-year-old-whisky/)
 * <span class="green">[BenRiach 15 Year Old (Pedro Ximénez Sherry Cask Finish)](https://www.masterofmalt.com/whiskies/benriach-15-year-old-pedro-ximinez-sherry-cask-finish-whisky/)</span>
 * [Benrinnes 15 Year Old - Flora and Fauna](https://www.masterofmalt.com/whiskies/benrinnes-15-year-old-whisky/)
+* <span class="green">[Cardhu Gold Reserve](https://www.masterofmalt.com/whiskies/cardhu/cardhu-gold-reserve-whisky/)</span>
 * <span class="red">Crown Royal Regal Apple</span>
 * [Dailuaine 16 Year Old - Flora and Fauna](https://www.masterofmalt.com/whiskies/dailuaine-16-year-old-whisky/)
 * [Dewar's White Label](https://www.masterofmalt.com/whiskies/dewars-blended-scotch-whisky/)
@@ -61,6 +64,7 @@ Tasted in 2017:
 * <span class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)</span>
 * <span class="green">[Port Askaig 100° Proof (Speciality Drinks)](https://www.masterofmalt.com/whiskies/speciality-drinks/port-askaig-100-proof-speciality-drinks-whisky/)</span>
 * <span class="red">[Togouchi Premium Blended Japanese Whisky](https://www.masterofmalt.com/whiskies/chugoku-jozo/togouchi-premium-blended-japanese-whisky/)</span>
+* [Tomintoul 12 Year Old Oloroso Sherry Cask](https://www.masterofmalt.com/whiskies/tomintoul-12-year-old-oloroso-sherry-cask-whisky/)
 * [Woodford Reserve Kentucky Bourbon](https://www.masterofmalt.com/whiskies/woodford-reserve-kentucky-bourbon-whiskey/)
 * [Yamazakura 16 Year Old](https://www.masterofmalt.com/whiskies/yamazakura/yamazakura-16-year-old-whisky/)
 
