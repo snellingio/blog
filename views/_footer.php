@@ -1,6 +1,7 @@
 <div class="article">
     <hr>
     <div class="footer">
+        <?php if ($path !== '') : ?><p>You should go back to the <a href="/">Home Page</a> and read something else!</p><?php endif ?>
         <?php $datetime = new DateTime(date('Y-m-d H:i:s'), new DateTimeZone('America/Chicago')); ?>
         <p>Have a wonderful <?= date('l'); ?>!</p>
         <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>

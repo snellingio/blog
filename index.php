@@ -36,6 +36,7 @@ $markdown = new Parsedown();
 $content = file_get_contents($file);
 
 $parameters             = [];
+$parameters['path']     = $path;
 $parameters['title']    = substr(strtok($content, "\n"), 2);
 $parameters['markdown'] = $markdown->text($content);
 
