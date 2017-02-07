@@ -1,6 +1,6 @@
 # Secrets Akumal, Our Two Year Anniversary
 
-For Rachel & I's second anniversary, we took a trip to [Secrets Akumal](http://www.secretsresorts.com/akumal-riviera-maya), an adult, all inclusive resort roughly an hour south of Cancun.
+For Rachel & I's second anniversary, we took a trip to [Secrets Akumal](http://www.secretsresorts.com/akumal-riviera-maya), an adult, all inclusive resort roughly an hour south of Cancun Mexico.
 
 [![](images/mexico/akumal001.jpg)](images/mexico/akumal001.jpg)
 
