@@ -1,6 +1,6 @@
 # Whisky, 2017
 
-Personal goal to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
+[Personal goal](/resolutions) to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
 <strong>Current status: 47/50</strong>, as of <i>February 5th</i>

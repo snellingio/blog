@@ -1,6 +1,6 @@
 # Beer, 2017
 
-Personal goal to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
+[Personal goal](/resolutions) to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com/) where you can learn more about each.
 
 <strong>Current status: 22/100</strong>, as of <i>February 5th</i>
