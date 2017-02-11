@@ -27,11 +27,12 @@
 - [Taste 50 different whiskeys](/whisky)
     - Currently 47/50
 - [Taste 100 different beers](/beer)
-    - Currently 22/100
+    - Currently 24/100
 - Try ten different sushi rolls with raw fish
-    - Currently 3/10
+    - Currently 4/10
     - Salmon
     - Tuna
+    - White Tuna
     - Yellowtail
 - Bake ten different loaves of bread
     - Currently 2/10
@@ -42,8 +43,9 @@
 - Give one public talk at local user group
 - Try Peking duck
 - Watch / re-watch ten tv shows
-    - Currently 4/10
+    - Currently 5/10
     - Watched [A Series of Unfortunate Events](http://www.imdb.com/title/tt4834206/)
+    - Watched [Limitless](http://www.imdb.com/title/tt4422836/)
     - Watched [The Newsroom](http://www.imdb.com/title/tt1870479/)
     - Rewatched [The IT Crowd](http://www.imdb.com/title/tt0487831/)
     - Rewatched [Seinfeld](http://www.imdb.com/title/tt0098904/)
@@ -52,4 +54,4 @@
    
     
     
-Updated <i>February 5th</i>
+Updated <i>February 10th</i>

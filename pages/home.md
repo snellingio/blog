@@ -4,6 +4,8 @@
 
 <a class="page" href="/pattern-parser">Pattern Parsing</a>
 
+<a class="page" href="/resolutions">Resolutions, 2017</a>
+
 <a class="page" href="/beer">Beer, 2017</a>
 
 <a class="page" href="/whisky">Whisky, 2017</a>
