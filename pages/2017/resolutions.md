@@ -21,13 +21,15 @@
 
 - Write 15 in depth blog posts 
     - Five on computers
+        - [Pattern Parser](/pattern-parser)
     - Five on cooking
+        - [Recipe: Chili](/chili-recipe)
     - Five on watches
 - Read five books cover to cover
 - [Taste 50 different whiskeys](/whisky)
-    - Currently 47/50
+    - Currently 50/~~30~~/~~50~~/70
 - [Taste 100 different beers](/beer)
-    - Currently 24/100
+    - Currently 26/100
 - Try ten different sushi rolls with raw fish
     - Currently 4/10
     - Salmon
@@ -54,4 +56,4 @@
    
     
     
-Updated <i>February 10th</i>
+Updated <i>February 12th</i>

@@ -1,9 +1,9 @@
 # Whisky, 2017
 
-[Personal goal](/resolutions) to taste ~~30~~ 50 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
+[Personal goal](/resolutions) to taste ~~30~~ ~~50~~ 70 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
-<strong>Current status: 47/50</strong>, as of <i>February 5th</i>
+<strong>Current status: 50/70</strong>, as of <i>February 5th</i>
 
 Current favorite overall:
 
@@ -28,12 +28,15 @@ Tasted in 2017:
 * [Balvenie DoubleWood 12 Year Old](https://www.masterofmalt.com/whiskies/balvenie/balvenie-doublewood-12-year-old-whisky/)
 * <span class="green">[BenRiach 15 Year Old (Pedro Ximénez Sherry Cask Finish)](https://www.masterofmalt.com/whiskies/benriach-15-year-old-pedro-ximinez-sherry-cask-finish-whisky/)</span>
 * [Benrinnes 15 Year Old - Flora and Fauna](https://www.masterofmalt.com/whiskies/benrinnes-15-year-old-whisky/)
+* [Caol Ila Moch](https://www.masterofmalt.com/whiskies/caol-ila-moch-single-malt-whisky/)
 * <span class="green">[Cardhu Gold Reserve](https://www.masterofmalt.com/whiskies/cardhu/cardhu-gold-reserve-whisky/)</span>
 * <span class="red">Crown Royal Regal Apple</span>
 * [Dailuaine 16 Year Old - Flora and Fauna](https://www.masterofmalt.com/whiskies/dailuaine-16-year-old-whisky/)
+* [Deanston Virgin Oak](https://www.masterofmalt.com/whiskies/deanston/deanston-virgin-oak-whisky/)
 * [Dewar's White Label](https://www.masterofmalt.com/whiskies/dewars-blended-scotch-whisky/)
 * [Evan Williams Extra Aged](https://www.masterofmalt.com/whiskies/heaven-hill/evan-williams-extra-aged-whiskey/)
 * <span class="red">[Fujikai 10 Year Old](https://www.masterofmalt.com/whiskies/monde-shuzo/fujikai-10-year-old-whisky/)</span>
+* <span class="green">[GlenDronach 8 Year Old The Hielan'](https://www.masterofmalt.com/whiskies/glendronach/the-glendronach-8-year-old-the-hielan-whisky/)</span>
 * [Glenfiddich 12 Year Old](https://www.masterofmalt.com/whiskies/glenfiddich-12-year-old-whisky/)  
 * [Glenfiddich 15 Year Old Solera](https://www.masterofmalt.com/whiskies/glenfiddich/glenfiddich-15-year-old-solera-whisky/)
 * [Glenfiddich 18 Year Old](https://www.masterofmalt.com/whiskies/glenfiddich-18-year-old-whisky/)
@@ -43,6 +46,7 @@ Tasted in 2017:
 * [Glenmorangie 10 Year Old - The Original](https://www.masterofmalt.com/whiskies/glenmorangie/glenmorangie-10-year-old-the-original-whisky/)
 * [Glenmorangie Nectar D'Or - 12 Year Old](https://www.masterofmalt.com/whiskies/glenmorangie-nectar-dor-12-year-old-whisky/)
 * [Glenmorangie Lasanta - 12 Year Old](https://www.masterofmalt.com/whiskies/glenmorangie-lasanta-12-year-old-whisky/)
+* [Glen Grant 10 Year Old](https://www.masterofmalt.com/whiskies/glen-grant-10-year-old-whisky/)
 * <span class="green">[Hibiki 12 Year Old](https://www.masterofmalt.com/whiskies/suntory-hibiki-12-year-old-whisky/)</span>
 * [Jameson Irish Whiskey](https://www.masterofmalt.com/whiskies/john-jamson-and-son/jamesons-irish-whiskey/)
 * [Johnnie Walker Black](https://www.masterofmalt.com/whiskies/johnnie-walker-black-label-12-year-old-whisky/)

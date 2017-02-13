@@ -3,7 +3,7 @@
 [Personal goal](/resolutions) to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com/) where you can learn more about each.
 
-<strong>Current status: 24/100</strong>, as of <i>February 10th</i>
+<strong>Current status: 26/100</strong>, as of <i>February 12th</i>
 
 
 Current favorite:
@@ -19,8 +19,10 @@ Tasted in 2017:
 * <span class="green">[Big Sky IPA](https://www.ratebeer.com/beer/big-sky-ipa/35164/)</span>
 * [Big Sky Montana Trout Slayer Ale](https://www.ratebeer.com/beer/big-sky-montana-trout-slayer-ale/77662/)
 * [Big Sky Moose Drool Brown Ale](https://www.ratebeer.com/beer/big-sky-moose-drool-brown-ale/5554/)
+* [BJ’s Brewhouse Blonde](https://www.ratebeer.com/beer/bjs-brewhouse-blonde/2590/)
 * [BJ’s HopStorm IPA](https://www.ratebeer.com/beer/bjs-hopstorm-ipa/172606/)
 * [Black Mesa Kolsch](https://www.ratebeer.com/beer/black-mesa-kolsch/364874/)
+* [Boulevard Unfiltered Wheat Beer](https://www.ratebeer.com/beer/boulevard-wheat/114/)
 * <span class="green">[Boulevard Smokestack Series: Tank 7 Farmhouse Ale](https://www.ratebeer.com/beer/boulevard-smokestack-series-tank-7-farmhouse-ale/102933/)</span>
 * [BridgePort Ebenezer Ale](https://www.ratebeer.com/beer/bridgeport-ebenezer-ale/10485/)
 * [COOP Ale Works Elevator Wheat](https://www.ratebeer.com/beer/coop-ale-works-elevator-wheat/315695/)
