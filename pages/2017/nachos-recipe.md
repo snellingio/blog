@@ -4,8 +4,6 @@
 
 <br>
 
-I've been eating these nachos once every week or two for years.
-
 ## 1. Place into a small pot on medium-low:
 * 16 oz - Refried beans (1 x 16 oz can)
 * 1/3 cup - Mild salsa or sauce
