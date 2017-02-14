@@ -12,9 +12,13 @@ I've been eating these nachos once every week or two for years.
 * 1/4 tsp - Chipotle chile powder
 * 1/4 tsp - Kosher salt
 
+<small>Note: Any mild salsa / sauce works. Taco Bell mild / hot is good.</small>
+
 Stir until well mixed. You can bump up the heat if you think the beans are "watery."
 
 ## 2. Line a pan with foil, place scoop chips face up.
+
+<small>Note: The "scoop chips" are the secret here. [Tostito Oven Baked Scoops](http://www.fritolay.com/snacks/product-page/oven-baked/tostitos-oven-baked-scoops-tortilla-chips), or [Tostito Multigrain Scoops](http://www.fritolay.com/snacks/product-page/tostitos/tostitos-multigrain-scoops-tortilla-chips) are both great.</small>
 
 [![](images/food/nachos-1.jpg)](images/food/nachos-1.jpg)
 
@@ -23,6 +27,8 @@ Stir until well mixed. You can bump up the heat if you think the beans are "wate
 [![](images/food/nachos-2.jpg)](images/food/nachos-2.jpg)
 
 ## 4. Grind 8-12 oz of Colby & Monterey Jack cheese, sprinkle over scoop chips.
+
+<small>Is grinding the cheese worth it over the big bags of mixed cheese? Yes.</small>
 
 [![](images/food/nachos-3.jpg)](images/food/nachos-3.jpg)
 
