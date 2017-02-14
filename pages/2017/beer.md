@@ -3,7 +3,7 @@
 [Personal goal](/resolutions) to taste ~~50~~ 100 different beers in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Rate Beer](https://www.ratebeer.com/) where you can learn more about each.
 
-<strong>Current status: 26/100</strong>, as of <i>February 12th</i>
+<strong>Current status: 27/100</strong>, as of <i>February 13th</i>
 
 
 Current favorite:
@@ -12,6 +12,7 @@ Current favorite:
 
 Tasted in 2017:
 
+* <span class="green">[Abita Andygator](https://www.ratebeer.com/beer/abita-andygator/3/)</span>
 * [Abita Wrought Iron IPA](https://www.ratebeer.com/beer/abita-wrought-iron-ipa/301508/)
 * <span class="red">[Angry Orchard Crisp Apple](https://www.ratebeer.com/beer/angry-orchard-crisp-apple/155194/)</span>
 * [Anthem Golden One](https://www.ratebeer.com/beer/anthem-golden-one/174969/)

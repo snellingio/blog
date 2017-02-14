@@ -5,8 +5,8 @@
 <br>
 
 ## Place into the slow cooker, turn on low:
-* 28 oz - Crushed tomatoes (1 x 28oz can)
-* 32 oz  - Black chili beans (2 x 16oz cans)
+* 28 oz - Crushed tomatoes (1 x 28 oz can)
+* 32 oz  - Black chili beans (2 x 16 oz cans)
 * 12 oz - Mild salsa, pick your favorite
 * 16 oz - Beef broth
 * 1 oz - Dark chocolate

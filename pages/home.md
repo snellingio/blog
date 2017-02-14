@@ -1,5 +1,7 @@
 ## 2017
 
+<a class="page" href="/nachos-recipe">Recipe: Nachos</a>
+
 <a class="page" href="/chili-recipe">Recipe: Chili</a>
 
 <a class="page" href="/secrets-akumal">Happy Two Year Anniversary Rachel!</a>
