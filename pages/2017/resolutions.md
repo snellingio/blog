@@ -30,7 +30,7 @@
 - [Taste 50 different whiskeys](/whisky)
     - Currently 52/~~30~~/~~50~~/70
 - [Taste 100 different beers](/beer)
-    - Currently 27/100
+    - Currently 27/~~50~~/100
 - Try ten different sushi rolls with raw fish
     - Currently 4/10
     - Salmon
