@@ -3,7 +3,7 @@
 [Personal goal](/resolutions) to taste ~~30~~ ~~50~~ 70 different drams in 2017. I have highlighted in <span class="green">green</span> ones that are exceptionally good, and highlighted in <span class="red">red</span> ones that I did not care for at all.
 I have included links, where applicable, to [Masters of Malt](https://www.masterofmalt.com/samples/) where you can buy wonderful 3cl samples.
 
-<strong>Current status: 50/70</strong>, as of <i>February 12th</i>
+<strong>Current status: 52/70</strong>, as of <i>February 15th</i>
 
 Current favorite overall:
 
@@ -40,6 +40,7 @@ Tasted in 2017:
 * [Glenfiddich 12 Year Old](https://www.masterofmalt.com/whiskies/glenfiddich-12-year-old-whisky/)  
 * [Glenfiddich 15 Year Old Solera](https://www.masterofmalt.com/whiskies/glenfiddich/glenfiddich-15-year-old-solera-whisky/)
 * [Glenfiddich 18 Year Old](https://www.masterofmalt.com/whiskies/glenfiddich-18-year-old-whisky/)
+* [Glenglassaugh Revival](https://www.masterofmalt.com/whiskies/glenglassaugh-revival-single-malt-whisky/)
 * <span class="green">[Glengoyne 12 Year Old](https://www.masterofmalt.com/whiskies/glengoyne/glengoyne-12-year-old-whisky/)</span>
 * [Glenlivet 12 Year Old](https://www.masterofmalt.com/whiskies/the-glenlivet-12-year-old-whisky/)
 * <span class="green">[Glenlivet 18 Year Old](https://www.masterofmalt.com/whiskies/the-glenlivet-18-year-old-whisky/)</span>
@@ -67,6 +68,7 @@ Tasted in 2017:
 * [Nikka Yoichi Single Malt](https://www.masterofmalt.com/whiskies/nikka/yoichi-single-malt-whisky/)
 * <span class="green">[Nikka Taketsuru 17 Year Old](https://www.masterofmalt.com/whiskies/nikka-taketsuru-17-year-old-whiskey/)</span>
 * <span class="green">[Port Askaig 100° Proof (Speciality Drinks)](https://www.masterofmalt.com/whiskies/speciality-drinks/port-askaig-100-proof-speciality-drinks-whisky/)</span>
+* [Tamdhu 10 Year Old](https://www.masterofmalt.com/whiskies/tamdhu/tamdhu-10-year-old-whisky/)
 * <span class="red">[Togouchi Premium Blended Japanese Whisky](https://www.masterofmalt.com/whiskies/chugoku-jozo/togouchi-premium-blended-japanese-whisky/)</span>
 * [Tomintoul 12 Year Old Oloroso Sherry Cask](https://www.masterofmalt.com/whiskies/tomintoul-12-year-old-oloroso-sherry-cask-whisky/)
 * [Woodford Reserve Kentucky Bourbon](https://www.masterofmalt.com/whiskies/woodford-reserve-kentucky-bourbon-whiskey/)
