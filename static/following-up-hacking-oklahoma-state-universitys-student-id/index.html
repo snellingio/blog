@@ -1,0 +1,181 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Following Up: Hacking Oklahoma State University’s Student ID | Sam Snelling</title>
+    <meta property="og:title" content="Following Up: Hacking Oklahoma State University’s Student ID | Sam Snelling">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@snellingio">
+    <meta name="twitter:creator" content="@snellingio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        a,code,kbd,pre,samp{overflow-wrap:break-word;word-wrap:break-word}.article,pre{padding:10px}a,code,kbd,pre,samp{word-wrap:break-word}img,pre{display:block}body{font-family:'Avenir Next',HelveticaNeue-Light,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.125em;color:#222;margin:0}.article{max-width:620px;margin:0 auto}a{color:#36b}a.page{font-size:1.3em}hr{margin:50px}h1,h2{font-size:1.5em;line-height:1.25;font-weight:500}h2 a,h2 a:active,h2 a:visited{color:#000;text-decoration:none}h3{font-size:1.25em;font-weight:600;margin-top:2em;margin-bottom:1em}h1:first-of-type{font-size:2em;margin-top:50px;margin-bottom:50px;font-weight:600}strong{font-weight:500}blockquote{margin:0 18px 18px;color:#666;padding-left:10px;border-left:4px solid #eee}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;word-break:break-all}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;overflow:scroll}pre code{padding:0;font-size:inherit;border-radius:0;color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}.header,.header a,.header a:visited{color:#fff}img{max-width:100%;height:auto}.header{background:#509EE3}.footer{text-align:center}.red,.red a{color:#e55235!important;font-weight:700}.green,.green a{color:#00AF45!important;font-weight:700}p{font-size:20px;line-height:1.6em}a[href^="//"]:after,a[href^="http://"]:after,a[href^="https://"]:after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);margin:0 0 0 5px}a[href^="https://snelling.io/"]:after,a[href^="//snelling.io/"]:after,a[href^="http://snelling.io/"]:after{content:'';margin:0}
+    </style>
+<body>
+<div class="header">
+    <div class="article">
+        <h2><a href="/">Sam Snelling</a></h2>
+        <p><i>The John Wick of PHP Software Development</i></p>
+    </div>
+</div>
+
+<div class="article">
+    <h1>Following Up: Hacking Oklahoma State University’s Student ID</h1>
+<h2>Introduction</h2>
+<p>I published a pretty lengthy report “Hacking Oklahoma State University’s Student ID” on Sunday that I originally wrote in 2013. You can see the original post here: <a href="http://snelling.io/hacking-oklahoma-state-university-student-id">http://snelling.io/hacking-oklahoma-state-university-student-id</a></p>
+<p>In two days, it was posted to Hacker News, Reddit /r/Netsec, and other sites that generated over 17,000 page views with hundreds of shares on Twitter and Facebook. Hindsight 20/20, I should have titled the report something differently to keep my Alma mater out of the headlines. With that said, the response from the community has been overwhelmingly positive, with several other University’s now auditing their own systems.</p>
+<p>Edit: An awesome writeup in hackaday - read it here <a href="http://hackaday.com/2015/02/25/hacking-oklahoma-state-universitys-student-id-cards/">http://hackaday.com/2015/02/25/hacking-oklahoma-state-universitys-student-id-cards/</a></p>
+<p>There are two main sections to this follow up:</p>
+<ul>
+<li>Answer some of the common questions people had, specifically the campus news paper.</li>
+<li>Dig deeper into who at Oklahoma State University read the original report.</li>
+</ul>
+<p>Current OSU students will be interested in the first section, everyone else will be interested in the second. </p>
+<hr />
+<h2>Public response to the O’Colly</h2>
+<p>The Daily O'Collegian, respectfully, reached out to me today saying they are going to be publishing an article on Friday, regardless of my response. </p>
+<p>Let me be very, very clear: The purpose of posting the original report was never to “go viral” or damage the University’s reputation. The purpose was to open up a broader discussion about security in general. Broken systems are all around us, and they will never be fixed unless we promote a culture ethical security research.</p>
+<p>When I asked what the purpose of the O’Colly article was, and I received the following:</p>
+<blockquote>
+<p>Assuming the ID cards aren't secure (which I'm no IT major but after reading your write-up it makes sense to me) we want to find out if OSU knows their insecure, and if they knowingly just let it slide. That said, if you did the presentation and they only did the bandaid fix of taking down the ID query URL, then that doesn't reflect well on the university at all. We want to explain to the student body if their bursar and personal information is safe or not.</p>
+</blockquote>
+<p>Hm. Feels like stirring the pot. I’m declining their interview because the last thing I want to do is spread fear, uncertainty, and doubt. I will answer the questions (modified by me) they asked publicly:</p>
+<p><strong>Are Student ID cards still vulnerable?</strong></p>
+<p>I do not believe there has been a major change to the way systems on campus validate the magnetic stripe on Student ID’s. I do believe there have been policy changes on how to treat Student ID’s on campus during purchases (example: photo identification required). </p>
+<p>One thing to mention here is that there is no “silver bullet” solution to fix all the problems. Yes, Oklahoma State should audit their systems, and reissue more secure Student ID’s. But the newest technologies are not without problems (specifically: RFID, NFC, and Chip &amp; Pin).</p>
+<p>Remember, You really should treat your Student ID like a credit card. Even if you allow someone to see  the front of your Student ID (and see the card number in the bottom right), someone could theoretically clone your card with very little work.</p>
+<p><strong>What is the feasibility of accessing a random Student ID?</strong></p>
+<p>Accessing a random ID would require you to either:</p>
+<ul>
+<li>Have an incredible guess on a card number (you have roughly a 2% chance)</li>
+<li>Have physical access to a card number</li>
+</ul>
+<p>I’ll repeat: You really should treat your Student ID like a credit card. Even if you allow someone to see  the front of your Student ID (and see the card number in the bottom right), someone could theoritically clone your card with very little work.</p>
+<p><strong>Have I been reached out to by the university as of this post?</strong></p>
+<p>No. But I will update this answer accordingly.</p>
+<hr />
+<h1>So who read the report at Oklahoma State?</h1>
+<p>I mentioned at the beginning that over 17,000 unique visitors read the article. Neat! How were these visits tracked?</p>
+<ul>
+<li>Google Analytics</li>
+<li>Clicky Analytics</li>
+</ul>
+<p>Google Analytics gives a really good view of the statistical demographic of people who read the original report:
+<a href="images/quuulf90fuczew.png"><img src="images/quuulf90fuczew.png" alt="Screenshot 2015-02-24 19.15.20.png" /></a></p>
+<p>But, I was only interested in seeing if anyone at Oklahoma State read it.</p>
+<p>Clicky allows us to dig a little deeper and actually export JSON data from our our analytical report!
+<a href="images/kj4j6dhemn8gnw.png"><img src="images/kj4j6dhemn8gnw.png" alt="Screenshot 2015-02-24 19.16.25.png" /></a>
+<a href="images/cdtkjlfstqeua.png"><img src="images/cdtkjlfstqeua.png" alt="Screenshot 2015-02-24 19.12.28.png" /></a></p>
+<p>So now we have a list of IP addresses. Okay, but what do a bunch of little numbers tell us about who is reading the report? Now comes in the fun <code>nslookup</code> command. It allows us to query a DNS server and see if we can get a hostname for the IP.
+<a href="images/8pcdba4yu816a.png"><img src="images/8pcdba4yu816a.png" alt="Screenshot 2015-02-24 13.10.27.png" /></a></p>
+<p>Hah, turns out that all of the external OSU IP’s have a hostname. Perfect. </p>
+<p>Let’s write a little piece of code to iterate over the Clicky JSON export.</p>
+<pre><code>&lt;?php
+
+// Load JSON
+$visitors = file_get_contents("visitors.json");
+
+// Decode it
+$json = json_decode($visitors, true);
+
+// Parse the tree, we just want items
+$items = $json[0]['dates'][0]['items'];
+
+foreach($items as $item){
+    $ip = $item['ip_address'];
+    $host = gethostbyaddr($ip);
+
+    // Filter out suddenlink and others, we only want OkState
+    if(strpos($host, 'okstate') != false)
+        echo $host ."\n";
+}</code></pre>
+<p>What this effectively does is dumps all the <code>okstate</code> hostnames from the Clicky JSON export, and allows us to see exactly who was on the site. I then removed the duplicates (some people were tracked separately per browser.</p>
+<pre><code>su-bkst-pbenne.su.okstate.edu
+rking.it.okstate.edu
+materer1.dhcp.okstate.edu
+pm201-pm108.pm.okstate.edu
+jhighto-win8.it.okstate.edu
+mike-cd2.it.okstate.edu
+tirnanog.agh.okstate.edu
+fim_si.su.okstate.edu
+carries-imac.wh.okstate.edu
+ssbc02j91sndrv9.bus.okstate.edu
+csrv-jrday10.su.okstate.edu
+ms108-54.itlabs.okstate.edu
+911.clb.okstate.edu
+comm-db8g5v1.wh.okstate.edu
+caption-1.itle.okstate.edu
+kerr-dip0.nat.okstate.edu
+villagec-dip0.nat.okstate.edu
+en323-software.ceat.okstate.edu
+kerr-dip1.nat.okstate.edu
+ia-9nqz0c1.cordell.okstate.edu
+crc-196-1-760.colvin.okstate.edu
+johneightv.it.okstate.edu
+argus-newlaptop.it.okstate.edu
+mathimage.ms-2345.okstate.edu
+dsauer-pc.it.okstate.edu
+mur445-sweet-p.smurraysouth.okstate.edu
+c-ils-seth.library.okstate.edu
+tyler-pc.it.okstate.edu
+it-raymoks.it.okstate.edu
+dbro.it.okstate.edu
+vault-tec.it.okstate.edu
+ps_dr.usda.okstate.edu
+tdmeier.it.okstate.edu
+ath-mxl2300xx3.ath.okstate.edu
+admins-imac-2.su.okstate.edu
+lcubed-two.it.okstate.edu
+cvmvm-shen-win8.cvm.okstate.edu
+bronsonit.agh.okstate.edu
+fim_ah.su.okstate.edu
+tdh-agh008j.agh.okstate.edu
+floyd.it.okstate.edu
+cynthia-pc.agh.okstate.edu
+agh169-andrew.agh.okstate.edu
+18-3-73-38-d8-94.it.okstate.edu
+bennett-dip4.nat.okstate.edu
+patchin-dip1.nat.okstate.edu
+stout-dip0.nat.okstate.edu
+bennett-dip0.nat.okstate.edu
+kerr-dip2.nat.okstate.edu
+villaged-dip0.nat.okstate.edu
+eve.residential.okstate.edu
+davis-dip1.nat.okstate.edu
+ece-reftas-10.ceat.okstate.edu
+vanilla.ceat.okstate.edu
+lse004-shartson-p.lse.okstate.edu
+iso-1.citd.okstate.edu
+ieo-kathy-1.citd.okstate.edu</code></pre>
+<p><strong>So what does it all mean?</strong></p>
+<p><code>.it.</code> is the IT department, as is <code>.itlabs.</code></p>
+<p><code>.wh.</code> is Whitehurst - home of the IT department</p>
+<p><code>.su.</code> is the Student Union</p>
+<p><code>.nat.</code> is most likely a dorm</p>
+<p>There are others, but it follows the pattern of <code>computer name</code> . <code>computer location</code>. For example: <code>rking.it.okstate.edu</code> could very well be Ron King in the IT department. Remember though - an IP cannot legally correlate with a person! Maybe we should revisit how we name our computers though.</p>
+<p>Thanks for reading OkState IT department! </p></div>
+
+<div class="article">
+    <hr>
+    <div class="footer">
+                <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>
+        <p>pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4</p>
+        <p>&copy;&nbsp;&nbsp;2011-2017&nbsp;&nbsp;Sam Snelling.&nbsp;&nbsp;All rights reserved.</p>
+        <p>Proudly written in Oklahoma.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101023701);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101023701ns.gif" /></p></noscript>

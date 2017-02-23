@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pattern Parser | Sam Snelling</title>
+    <meta property="og:title" content="Pattern Parser | Sam Snelling">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@snellingio">
+    <meta name="twitter:creator" content="@snellingio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        a,code,kbd,pre,samp{overflow-wrap:break-word;word-wrap:break-word}.article,pre{padding:10px}a,code,kbd,pre,samp{word-wrap:break-word}img,pre{display:block}body{font-family:'Avenir Next',HelveticaNeue-Light,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.125em;color:#222;margin:0}.article{max-width:620px;margin:0 auto}a{color:#36b}a.page{font-size:1.3em}hr{margin:50px}h1,h2{font-size:1.5em;line-height:1.25;font-weight:500}h2 a,h2 a:active,h2 a:visited{color:#000;text-decoration:none}h3{font-size:1.25em;font-weight:600;margin-top:2em;margin-bottom:1em}h1:first-of-type{font-size:2em;margin-top:50px;margin-bottom:50px;font-weight:600}strong{font-weight:500}blockquote{margin:0 18px 18px;color:#666;padding-left:10px;border-left:4px solid #eee}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;word-break:break-all}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;overflow:scroll}pre code{padding:0;font-size:inherit;border-radius:0;color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}.header,.header a,.header a:visited{color:#fff}img{max-width:100%;height:auto}.header{background:#509EE3}.footer{text-align:center}.red,.red a{color:#e55235!important;font-weight:700}.green,.green a{color:#00AF45!important;font-weight:700}p{font-size:20px;line-height:1.6em}a[href^="//"]:after,a[href^="http://"]:after,a[href^="https://"]:after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);margin:0 0 0 5px}a[href^="https://snelling.io/"]:after,a[href^="//snelling.io/"]:after,a[href^="http://snelling.io/"]:after{content:'';margin:0}
+    </style>
+<body>
+<div class="header">
+    <div class="article">
+        <h2><a href="/">Sam Snelling</a></h2>
+        <p><i>The John Wick of PHP Software Development</i></p>
+    </div>
+</div>
+
+<div class="article">
+    <h1>Pattern Parser</h1>
+<p>Recently, I published a pattern parsing library which you can find on Github (<a href="https://github.com/snellingio/pattern-parser">https://github.com/snellingio/pattern-parser</a>).</p>
+<p>Originally built as a way to start testing NLP phrases, it offers a lot of power without the complexity of regular expressions.</p>
+<p>Say you wanted to build a slash command to <code>/estimate</code> how long a particular task would take in hours and minutes, rounded to the nearest 15 minutes.</p>
+<p>How would you parse this?</p>
+<pre><code class="language-angular2html">/estimate 3 hrs 20 minutes</code></pre>
+<p>vs this</p>
+<pre><code class="language-angular2html">/estimate 3hours 20m</code></pre>
+<p>vs this</p>
+<pre><code>/estimate 3 h 20 min</code></pre>
+<p>Using the pattern parsing library, we can just make a simple parsing rule like so:</p>
+<pre><code class="language-php">$string       = '3h 20m';
+$patternParser = new OnROI\PatternParser\PatternParser();
+
+// You can match any pattern you want!
+$parsed_hours_minutes = $patternParser-&gt;process($string, '{hours}h {minutes}m');
+$parsed_hours         = $patternParser-&gt;process($string, '{hours}h');
+$parsed_minutes       = $patternParser-&gt;process($string, '{minutes}m');</code></pre>
+<p>Let's put it together to fit the original business goal. Instead of writing a complex regular expression, let's just normalize the string, pattern parse, and do some math.</p>
+<pre><code class="language-php">$comment       = '/estimate 3 h 20 min';
+$patternParser = new OnROI\PatternParser\PatternParser();
+
+// Remove forward slash if someone is using /estimate
+if (strpos($comment, '/') === 0) {
+    $comment = substr($comment, 1);
+}
+
+// Skip comment if it doesn't have estimate starting it out
+if (strpos(strtolower($comment), 'estimate') !== 0) {
+    return false;
+}
+
+$clean_comment = trim(str_replace(['estimate', ':', '-', 'our', 'r', 'in', 'ute', 's'], '', strtolower($comment)));
+
+// Parse two different scenarios, hours, and hours and minutes
+$parsed_hours_minutes = $patternParser-&gt;process($clean_comment, '{hours}h {minutes}m');
+$parsed_hours         = $patternParser-&gt;process($clean_comment, '{hours}h');
+$parsed_minutes       = $patternParser-&gt;process($clean_comment, '{minutes}m');
+
+// We could not parse hours, ruh roh. This should always be parsed at a minimum.
+if (empty($parsed_hours) &amp;&amp; empty($parsed_minutes)) {
+    return false;
+}
+
+$hours   = 0;
+$minutes = 0;
+
+// Set estimate to parsed hours
+if (!empty($parsed_hours)) {
+    // Parse &amp; filter hours
+    $hours = (float) filter_var($parsed_hours['hours'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+}
+
+if (!empty($parsed_minutes)) {
+    // Parse &amp; filter minutes
+    $minutes = (float) filter_var($parsed_minutes['minutes'], FILTER_SANITIZE_NUMBER_INT);
+}
+
+if (!empty($parsed_hours_minutes)) {
+    // Parse &amp; filter hours and minutes
+    $hours   = (float) filter_var($parsed_hours_minutes['hours'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $minutes = (int) filter_var($parsed_hours_minutes['minutes'], FILTER_SANITIZE_NUMBER_INT);
+}
+
+// Parse in 15 minute increments
+$minutes_to_hours = ceil($minutes / 15) * .25;
+
+// Set the time
+$estimate = $hours + $minutes_to_hours;</code></pre>
+<p>Easy peasy.</p></div>
+
+<div class="article">
+    <hr>
+    <div class="footer">
+                <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>
+        <p>pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4</p>
+        <p>&copy;&nbsp;&nbsp;2011-2017&nbsp;&nbsp;Sam Snelling.&nbsp;&nbsp;All rights reserved.</p>
+        <p>Proudly written in Oklahoma.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101023701);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101023701ns.gif" /></p></noscript>

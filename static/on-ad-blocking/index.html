@@ -1,0 +1,245 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ad Blocking, Ad Networks, & Your IP Address | Sam Snelling</title>
+    <meta property="og:title" content="Ad Blocking, Ad Networks, & Your IP Address | Sam Snelling">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@snellingio">
+    <meta name="twitter:creator" content="@snellingio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        a,code,kbd,pre,samp{overflow-wrap:break-word;word-wrap:break-word}.article,pre{padding:10px}a,code,kbd,pre,samp{word-wrap:break-word}img,pre{display:block}body{font-family:'Avenir Next',HelveticaNeue-Light,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.125em;color:#222;margin:0}.article{max-width:620px;margin:0 auto}a{color:#36b}a.page{font-size:1.3em}hr{margin:50px}h1,h2{font-size:1.5em;line-height:1.25;font-weight:500}h2 a,h2 a:active,h2 a:visited{color:#000;text-decoration:none}h3{font-size:1.25em;font-weight:600;margin-top:2em;margin-bottom:1em}h1:first-of-type{font-size:2em;margin-top:50px;margin-bottom:50px;font-weight:600}strong{font-weight:500}blockquote{margin:0 18px 18px;color:#666;padding-left:10px;border-left:4px solid #eee}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;word-break:break-all}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;overflow:scroll}pre code{padding:0;font-size:inherit;border-radius:0;color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}.header,.header a,.header a:visited{color:#fff}img{max-width:100%;height:auto}.header{background:#509EE3}.footer{text-align:center}.red,.red a{color:#e55235!important;font-weight:700}.green,.green a{color:#00AF45!important;font-weight:700}p{font-size:20px;line-height:1.6em}a[href^="//"]:after,a[href^="http://"]:after,a[href^="https://"]:after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);margin:0 0 0 5px}a[href^="https://snelling.io/"]:after,a[href^="//snelling.io/"]:after,a[href^="http://snelling.io/"]:after{content:'';margin:0}
+    </style>
+<body>
+<div class="header">
+    <div class="article">
+        <h2><a href="/">Sam Snelling</a></h2>
+        <p><i>The John Wick of PHP Software Development</i></p>
+    </div>
+</div>
+
+<div class="article">
+    <h1>Ad Blocking, Ad Networks, &amp; Your IP Address</h1>
+<p>First things first - ad blocking simply is the removal of advertisements from a web page. This is done via a few ways such as stopping web requests to advertising networks before they are made, stopping the execution of advertising networks code, or simply adding additional styles to a web page to &quot;hide&quot; an advertisement. </p>
+<p>Ad blocking has become popular as it has become more accessible to the average user. In the past, it would require editing a hosts file on a particular computer to reject content from known domains. Now, you install a browser extension on your browser or phone, and it does all the work for you.</p>
+<p>Blocking ads is a big deal to publishers because it is their main revenue stream in most cases. Typically, publishers sign up with an advertising network which gives them a snippet of code to place in their own website. The advertising network commits to paying the publisher a few cents to several dollars per thousand users who view the advertisement. Sometimes the advertising network gives incentives for clicks on an ad, and will give a higher rate for clicks. </p>
+<p>Publishers, being the businesses that they are, usually talk to several ad networks, and test how much money they can make from each. Since each ad is tracked independently, they can make more money by placing more ads on each page. In simple terms, if each advertisement makes them $0.50 per thousand views, they can make $1.00 per thousand views if they place two ads on the site that get viewed or interacted with.</p>
+<p><strong>Overall</strong>: It's in the best interest of the publisher to make the most money from each customer.</p>
+<hr />
+<p>Advertising networks are the middlemen that make this entire transaction work. Advertising networks charge other businesses to place the ads on publishers’ sites / networks. Advertising networks promise the businesses that they will intelligently pick the best users to show their ads to. This includes the demographics of the publisher’s website, the demographics of the user based on location, and they also do something really neat, which is tracking each users viewing / clicking history. What this allows the advertising network to do is know when you have viewed a particular ad, and then show similar or dissimilar ads on future requests based what they think you like. These advertising networks actually make deals with other websites to place their code on them, so they can get a better idea of what you like, as well as do something fancy called &quot;retargeting&quot; which is when you view a product on a site, and then you start seeing ads for that product on other places on the web. For the record, retargeting is the gold standard for publishers, ad networks, and businesses purchasing ads because they can be traced back to product purchases, therefore allowing a premium ad price to be paid to all parties.</p>
+<hr />
+<p>Now that we understand a little more about how the business side of this works, let's take a look at what they can actually track. I'm going to take a fairly bare bones approach and just use my own ip address, and see what other deductions we can make from it. For the record, every single web request you make, you send your own ip address so that web servers know where to send you content, it’s a universal identifier which is core to the internet. Simply hiding advertisements doesn't prevent this, you must actually block the web request from happening.</p>
+<p>My public IP is <code>98.168.143.37</code> which you can easily get from just googling “what’s my ip.”</p>
+<p><a href="images/rzm0vq0gs3yiwq.png"><img src="images/rzm0vq0gs3yiwq.png" alt="whatsmyip.png" /></a></p>
+<hr />
+<p>Cool beans. So now I know that every web request I make on the internet, I send this ip <code>98.168.143.37</code> so that web servers know where to send content. One important thing to note is that most consumers probably have a “dynamic ip address” meaning that your internet service provider probably rotates this ip address ever 24-48 hours. Your internet service provider usually charges more money for static ip addresses which is where you keep the same ip forever.</p>
+<p>Okay, so we’ve established I send the same string of numbers as my address. What could someone find out about you from that string of numbers? Lucky for me, I subscribe to a fun service called MaxMind which they claim to be 80-90+% accurate.</p>
+<p>So I run a little curl request:</p>
+<pre><code>curl -u "{user_id}:{license_key}" \
+       "https://geoip.maxmind.com/geoip/v2.1/insights/98.168.143.37?pretty"</code></pre>
+<p>And get back the following information:</p>
+<pre><code>{
+   "city" : {
+      "confidence" : 38,
+      "geoname_id" : 4535389,
+      "names" : {
+         "en" : "Duncan",
+         "ru" : "Дункан"
+      }
+   },
+   "continent" : {
+      "code" : "NA",
+      "geoname_id" : 6255149,
+      "names" : {
+         "de" : "Nordamerika",
+         "en" : "North America",
+         "es" : "Norteamérica",
+         "fr" : "Amérique du Nord",
+         "ja" : "北アメリカ",
+         "pt-BR" : "América do Norte",
+         "ru" : "Северная Америка",
+         "zh-CN" : "北美洲"
+      }
+   },
+   "country" : {
+      "confidence" : 99,
+      "geoname_id" : 6252001,
+      "iso_code" : "US",
+      "names" : {
+         "de" : "USA",
+         "en" : "United States",
+         "es" : "Estados Unidos",
+         "fr" : "États-Unis",
+         "ja" : "アメリカ合衆国",
+         "pt-BR" : "Estados Unidos",
+         "ru" : "Сша",
+         "zh-CN" : "美国"
+      }
+   },
+   "location" : {
+      "accuracy_radius" : 8,
+      "average_income" : 27665,
+      "latitude" : 34.4853,
+      "longitude" : -97.8522,
+      "metro_code" : 650,
+      "population_density" : 653,
+      "time_zone" : "America/Chicago"
+   },
+   "maxmind" : {
+      "queries_remaining" : 9905
+   },
+   "postal" : {
+      "code" : "73012",
+      "confidence" : 34
+   },
+   "registered_country" : {
+      "geoname_id" : 6252001,
+      "iso_code" : "US",
+      "names" : {
+         "de" : "USA",
+         "en" : "United States",
+         "es" : "Estados Unidos",
+         "fr" : "États-Unis",
+         "ja" : "アメリカ合衆国",
+         "pt-BR" : "Estados Unidos",
+         "ru" : "Сша",
+         "zh-CN" : "美国"
+      }
+   },
+   "subdivisions" : [
+      {
+         "confidence" : 97,
+         "geoname_id" : 4544379,
+         "iso_code" : "OK",
+         "names" : {
+            "en" : "Oklahoma",
+            "es" : "Oklahoma",
+            "ja" : "オクラホマ州",
+            "ru" : "Оклахома"
+         }
+      }
+   ],
+   "traits" : {
+      "autonomous_system_number" : 22773,
+      "autonomous_system_organization" : "Cox Communications Inc.",
+      "domain" : "cox.net",
+      "ip_address" : "98.168.143.37",
+      "isp" : "Cox Communications",
+      "organization" : "Cox Communications",
+      "user_type" : "residential"
+   }
+}</code></pre>
+<p>So each and every web request I make to any website, can find out my city, state, zip code, internet service provider, time zone, average city income, average population, and if I’m residential. Technically I’m in Oklahoma City a hundred miles north of Duncan, but other IP services actually get it right.</p>
+<p><a href="images/i8x89cwcqtp79q.png"><img src="images/i8x89cwcqtp79q.png" alt="ipinfo.png" /></a></p>
+<pre><code>curl ipinfo.io</code></pre>
+<pre><code>{
+  "ip": "98.168.143.37",
+  "hostname": "ip98-168-143-37.ok.ok.cox.net",
+  "city": "Oklahoma City",
+  "region": "Oklahoma",
+  "country": "US",
+  "loc": "35.4707,-97.5205",
+  "org": "AS22773 Cox Communications Inc.",
+  "postal": "73102",
+  "phone": 405
+}</code></pre>
+<p>Okay, so what else can you find out from my ip address if you know my location? Let’s try out a quick inclusive wolfram search.</p>
+<p><a href="images/yirzkri3vdlftq.jpg"><img src="images/yirzkri3vdlftq.jpg" alt="wolfram.jpg" /></a></p>
+<p>Each and every web request I make, you can potentially find out county information, race and demographics information, educational attainment, income statistics, economic statistics, crime rates, etc. Not only that, you can link my data with other ip addresses within a certain geo radius.</p>
+<p>Wowee. So every request you make to an advertising network leaks all of that information. Think they aren’t doing this? Think again. Google Analytics allows demographic information for free! Imagine what advertising networks are collecting. Match up your ip information with your search history around the web over time, and now we’re talking about some serious data.</p>
+<p>Ask yourself this as well, do you think that government subpoenas are or aren’t being made to advertising networks, who hold troves of data?</p>
+<hr />
+<p>We’ve touched on privacy, let’s touch on safety and speed.</p>
+<hr />
+<p><strong>Speed</strong></p>
+<p>Look at the graphic below, and then go read this article from where I took the graphic from: [<a href="https://www.raymond.cc/blog/10-ad-blocking-extensions-tested-for-best-performance/view-all/">https://www.raymond.cc/blog/10-ad-blocking-extensions-tested-for-best-performance/view-all/</a>]</p>
+<p><a href="images/w3gtswjmtrds6q.png"><img src="images/w3gtswjmtrds6q.png" alt="chrome_ad_blocker_combined_scores.png" /></a></p>
+<hr />
+<p><strong>Safety</strong> </p>
+<p>“Malvertising” is the use of online advertising to spread malware. This is typically where there is an exploit in your internet browser, and you download a virus by accident. </p>
+<p>Here are a few resources for you to peek at:</p>
+<ul>
+<li>[<a href="https://en.wikipedia.org/wiki/Malvertising">https://en.wikipedia.org/wiki/Malvertising</a>]</li>
+<li>[<a href="https://en.wikipedia.org/wiki/Drive-by_download">https://en.wikipedia.org/wiki/Drive-by_download</a>]</li>
+</ul>
+<p>Here’s a recent article that came out on Sept 14th, 2015 titled “Large Malvertising Campaign Goes (Almost) Undetected” which lists the following sites sorted by traffic which were affected by malvertising.</p>
+<ul>
+<li><code>ebay.co.uk</code> - 139M</li>
+<li><code>drudgereport.com</code> - 61.30M</li>
+<li><code>answers.com</code> - 53.8M</li>
+<li><code>wowhead.com</code> - 27.8M</li>
+<li><code>ehowespanol.com</code> - 20.30M</li>
+<li><code>legacy.com</code> - 18.4M</li>
+<li><code>newsnow.co.uk</code> - 15.50M</li>
+<li><code>talktalk.co.uk</code> - 11.10M</li>
+<li><code>manta.com</code> - 9.8M</li>
+</ul>
+<p>Link:</p>
+<ul>
+<li>[<a href="https://blog.malwarebytes.org/malvertising-2/2015/09/large-malvertising-campaign-goes-almost-undetected/">https://blog.malwarebytes.org/malvertising-2/2015/09/large-malvertising-campaign-goes-almost-undetected/</a>]</li>
+</ul>
+<p>Also, MSN and Yahoo had the same thing happen:</p>
+<ul>
+<li>[<a href="https://blog.malwarebytes.org/malvertising-2/2015/08/angler-exploit-kit-strikes-on-msn-com-via-malvertising-campaign/">https://blog.malwarebytes.org/malvertising-2/2015/08/angler-exploit-kit-strikes-on-msn-com-via-malvertising-campaign/</a>]</li>
+<li>[<a href="https://blog.malwarebytes.org/malvertising-2/2015/08/large-malvertising-campaign-takes-on-yahoo/">https://blog.malwarebytes.org/malvertising-2/2015/08/large-malvertising-campaign-takes-on-yahoo/</a>]</li>
+</ul>
+<hr />
+<p><strong>Manipulation - (Edited)</strong></p>
+<p>People don't want to be manipulated into buying things they don't need. People are also concerned about their children being manipulated as well.</p>
+<p>See hacker news:</p>
+<ul>
+<li>[<a href="https://news.ycombinator.com/item?id=10245613">https://news.ycombinator.com/item?id=10245613</a>]</li>
+</ul>
+<hr />
+<p>Now you should be informed at the 3 (edit: 4) biggest arguments why you should be blocking ads. Let’s take a look at the arguments against blocking ads.</p>
+<p><strong>Argument #1</strong></p>
+<p>Blocking ads is violating an implied contract between the reader and the publisher. Because publishers give the content for free, you are obligated to load the ads and in essence pay for the article with your ad revenue.</p>
+<p><strong>Argument #2</strong></p>
+<p>Blocking ads is stealing. You wouldn’t go into a restaurant and not pay for food, why go to a website and not load the ads.</p>
+<p><strong>Argument #3</strong></p>
+<p>Blocking ads is taking away the revenue stream of independent publishers, and therefore publishers will go out of business.</p>
+<p><strong>Argument #4</strong></p>
+<p>Blocking ads hurts the children.</p>
+<blockquote>
+<p>“Every time you block an ad, what you're really blocking is food from entering a child's mouth.”</p>
+</blockquote>
+<p>Via <a href="http://www.tomsguide.com/us/ad-blocking-is-stealing,news-20962.html">http://www.tomsguide.com/us/ad-blocking-is-stealing,news-20962.html</a></p>
+<hr />
+<p><strong>Personal opinion</strong></p>
+<p>Subject to change, likely to be hot headed for now:</p>
+<ul>
+<li>I will install ad blockers everywhere I can, and advocate everyone use one.</li>
+<li>Ad blockers on mobile is equally, if not more important than desktop ad blockers.</li>
+<li>There is no implied contract that you can dictate what I do and do not load. If I want to enable no script, or block cookies, or use a vpn with a rotating ip address, I will. All these things will change your ad revenue.</li>
+<li>Ad networks are sleazy, creepy, and I don’t want to do business with them.</li>
+<li>Malvertising and drive by downloads are real fucking problems. They are exploiting online advertising.</li>
+<li>Speed boost is a nice to have, but not a reason alone to block ads.</li>
+<li>If you don’t want to provide content without me looking at ads, then don’t show my content when I use an ad blocker. The work has already been done for you here: [<a href="https://github.com/sitexw/FuckAdBlock">https://github.com/sitexw/FuckAdBlock</a>]</li>
+<li>You cannot be against government / big business bulk collection of metadata, and not be pro ad blocker. Privacy is important. And leaking tons of identifying info about yourself all over the internet is not good.</li>
+</ul></div>
+
+<div class="article">
+    <hr>
+    <div class="footer">
+                <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>
+        <p>pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4</p>
+        <p>&copy;&nbsp;&nbsp;2011-2017&nbsp;&nbsp;Sam Snelling.&nbsp;&nbsp;All rights reserved.</p>
+        <p>Proudly written in Oklahoma.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101023701);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101023701ns.gif" /></p></noscript>

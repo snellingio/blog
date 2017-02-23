@@ -1,0 +1,316 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Understanding SSL Misconfiguration | Sam Snelling</title>
+    <meta property="og:title" content="Understanding SSL Misconfiguration | Sam Snelling">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@snellingio">
+    <meta name="twitter:creator" content="@snellingio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        a,code,kbd,pre,samp{overflow-wrap:break-word;word-wrap:break-word}.article,pre{padding:10px}a,code,kbd,pre,samp{word-wrap:break-word}img,pre{display:block}body{font-family:'Avenir Next',HelveticaNeue-Light,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.125em;color:#222;margin:0}.article{max-width:620px;margin:0 auto}a{color:#36b}a.page{font-size:1.3em}hr{margin:50px}h1,h2{font-size:1.5em;line-height:1.25;font-weight:500}h2 a,h2 a:active,h2 a:visited{color:#000;text-decoration:none}h3{font-size:1.25em;font-weight:600;margin-top:2em;margin-bottom:1em}h1:first-of-type{font-size:2em;margin-top:50px;margin-bottom:50px;font-weight:600}strong{font-weight:500}blockquote{margin:0 18px 18px;color:#666;padding-left:10px;border-left:4px solid #eee}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;word-break:break-all}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;overflow:scroll}pre code{padding:0;font-size:inherit;border-radius:0;color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}.header,.header a,.header a:visited{color:#fff}img{max-width:100%;height:auto}.header{background:#509EE3}.footer{text-align:center}.red,.red a{color:#e55235!important;font-weight:700}.green,.green a{color:#00AF45!important;font-weight:700}p{font-size:20px;line-height:1.6em}a[href^="//"]:after,a[href^="http://"]:after,a[href^="https://"]:after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);margin:0 0 0 5px}a[href^="https://snelling.io/"]:after,a[href^="//snelling.io/"]:after,a[href^="http://snelling.io/"]:after{content:'';margin:0}
+    </style>
+<body>
+<div class="header">
+    <div class="article">
+        <h2><a href="/">Sam Snelling</a></h2>
+        <p><i>The John Wick of PHP Software Development</i></p>
+    </div>
+</div>
+
+<div class="article">
+    <h1>Understanding SSL Misconfiguration</h1>
+<h2>Introduction</h2>
+<p>To be honest, it’s relatively infuriating in 2015 to see so many sites that have misconfigured SSL.</p>
+<p><strong>Everyone</strong> (including you business folks!) should have a basic understanding of how secure connections on the internet works. </p>
+<p>The goal is to have anyone understand it’s importance, the basic parts of SSL, and very quickly understand if you are doing it wrong. </p>
+<hr />
+<h2>HTTP vs HTTPS</h2>
+<p>HTTP is a protocol that is used for communicating with web servers. Just as a recap - <strong>HTTP</strong> &amp; <strong>HTTPS</strong> are different. The <code>S</code> stands for secure. The most important thing for you to know is that they are SEPARATE protocols.</p>
+<hr />
+<h2>What are SSL and TLS?</h2>
+<p>SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are mechanisms for safely transmitting data. On the web, SSL and TLS try to do two things:</p>
+<ul>
+<li>Encrypt and verify the integrity of traffic between the browser and the server.</li>
+<li>Verify that the browser is talking to the correct server. In practice, this usually means verifying that the owner of the domain and the owner of the server are the same entity. This helps prevent man-in-the-middle attacks. Without it there's no guarantee that you're encrypting traffic to the right recipient.
+The SSL protocol is both outdated and insecure, and has since been replaced by TLS. However, the term &quot;SSL&quot; continues to be used colloquially to refer to the general mechanism for protecting transmitted data.</li>
+</ul>
+<p>To prepare a web server to accept HTTPS connections (remember this is different than HTTP), a public key certificate must be created for the web server. This certificate must be signed by a trusted certificate authority (a trusted third party) for the web browser to accept it without warning. Web browsers are distributed with a list of signing certificates of major certificate authorities so that they can verify certificates signed by them. </p>
+<p>Read more: <a href="http://en.wikipedia.org/wiki/HTTPS">http://en.wikipedia.org/wiki/HTTPS</a></p>
+<hr />
+<h2>If you are non-technical… Use SSL Labs and call it good.</h2>
+<p>Go to <a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a>  … fill in your domain name, and click submit. Soon you will have an A-F score for how well your SSL is configured! Print out that page, and bring it to your web guy. If you’re unsure, drop me an email at sam@snelling.io and I’ll help you get started. </p>
+<p>… This is where I leave you. Keep reading if you are more technical :)</p>
+<hr />
+<h2>If you are more technical…</h2>
+<p>Awesome, I know I’ve slow played you so far, but let’s jump into things. I’ll say it again just because it is worth repeating… SSL Labs is a great place to start to get a good frame of reference -&gt; <a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></p>
+<hr />
+<h2>Recommended configurations</h2>
+<p>At <a href="https://wiki.mozilla.org/Security/Server_Side_TLS">https://wiki.mozilla.org/Security/Server_Side_TLS</a>, Mozilla has a few recommended configurations:</p>
+<ul>
+<li><strong>Modern</strong> <code>Firefox 27, Chrome 22, IE 11, Opera 14, Safari 7, Android 4.4, Java 8</code></li>
+<li><strong>Intermediate</strong> <code>Firefox 1, Chrome 1, IE 7, Opera 5, Safari 1, Windows XP IE8, Android 2.3, Java 7</code></li>
+<li><strong>Old</strong> <code>Windows XP IE6, Java 6</code></li>
+</ul>
+<p>Let’s be real here, you should be at least targeting Intermediate in 2015. </p>
+<p>Okay, what do we need to be looking at in your configuration? A few things:</p>
+<ul>
+<li>Ciphersuite</li>
+<li>SSL &amp; TLS Version</li>
+<li>RSA Key Size</li>
+<li>DH Parameter Size</li>
+<li>Elliptic curve</li>
+<li>Certificate signature</li>
+<li>HSTS</li>
+<li>Forward Secrecy</li>
+</ul>
+<p>… My goodness that’s a lot to wrap your head around. Let’s try and simplify it.</p>
+<hr />
+<h2>Cipher suites</h2>
+<p>Via <a href="http://en.wikipedia.org/wiki/Cipher_suite">http://en.wikipedia.org/wiki/Cipher_suite</a></p>
+<blockquote>
+<p>A cipher suite is a named combination of authentication, encryption, message authentication code (MAC) and key exchange algorithms used to negotiate the security settings for a network connection using the Transport Layer Security (TLS) / Secure Sockets Layer (SSL) network protocol.</p>
+</blockquote>
+<p><strong>What you need to know:</strong> the web browser sends a list of supported <em>cipher suites</em> to the web server with an order of preference, and the server responds with cipher suite it selected from the list.</p>
+<hr />
+<h2>SSL &amp; TLS Versions</h2>
+<p>There’s SSLv1, SSLv2, SSLv3, TLS 1, TLS 1.1, TLS 1.2. <em>Wipes brow</em></p>
+<p><strong>What you need to know:</strong> Don’t support SSLv1, SSLv2 or SSLv3. Why? SSL 1 &amp; 2 were deprecated long ago, so it’s a non issue. SSL 3 is vulnerable to several exploits, so disable it. If you’re going to only target the newest browsers, you can also drop support for TLS 1 (do some research if this is right for you).</p>
+<hr />
+<h2>RSA Key Size</h2>
+<p>Via <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem">http://en.wikipedia.org/wiki/RSA_(cryptosystem</a>)</p>
+<blockquote>
+<p>In cryptography, key size or key length is the size measured in bits of the key used in a cryptographic algorithm. </p>
+</blockquote>
+<p>Via <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem">http://en.wikipedia.org/wiki/RSA_(cryptosystem</a>)</p>
+<blockquote>
+<p>RSA is one of the first practicable public-key cryptosystems and is widely used for secure data transmission. In such a cryptosystem, the encryption key is public and differs from the decryption key which is kept secret.</p>
+</blockquote>
+<p><strong>What you need to know:</strong> Make your RSA Key Size 2048. According to RSA, the 2048 key size should be safe until year 2030 (ish) whereas a key size of 1024 is already insecure.</p>
+<hr />
+<h2>DH Parameter Size</h2>
+<p>While I could get into the intricacies of the Diffie-Hellman algorithm, bits of prime, and <code>DHE_RSA</code> cipher suites , I’m just going to give you what you need to know here.</p>
+<p><strong>What you need to know:</strong> Make the DH Parameter Size the same as your RSA Key Size. Recommendation is 2048! With that said, if your RSA Key Size is 1024, make your DH Parameter Size 1024, because it will not increase your security and you will have to pay for an extra large key.</p>
+<hr />
+<h2>Elliptic curve</h2>
+<p>Via <a href="http://en.wikipedia.org/wiki/Elliptic_curve_cryptography">http://en.wikipedia.org/wiki/Elliptic_curve_cryptography</a></p>
+<blockquote>
+<p>Elliptic curve cryptography (ECC) is an approach to public-key cryptography based on the algebraic structure of elliptic curves over finite fields.
+Public-key cryptography is based on the intractability of certain mathematical problems.</p>
+</blockquote>
+<p><strong>What you need to know:</strong> Set the elliptic curve to secp256r1, secp384r1, secp521r1 (at a minimum).</p>
+<hr />
+<h2>Certificate signature</h2>
+<p>The certificate signature is essentially a hash of the certificate. It operates on the premise of a digital signature to verify authenticity. </p>
+<p><strong>What you need to know:</strong> If you need to support Windows XP (before Service Pack 3), you need to use SHA-1. If you don’t need to support that, use SHA-256. I repeat, <strong>use SHA-256</strong>.</p>
+<hr />
+<h2>HSTS</h2>
+<p>HSTS is a HTTP header that states how long to continue using HTTPS for.
+ Sample HSTS header:</p>
+<pre><code>Strict-Transport-Security: max-age=15724800</code></pre>
+<p><strong>What you need to know:</strong>  Use it if you’re planning on supporting HTTPS forever. So use it.</p>
+<hr />
+<h2>Forward Secrecy</h2>
+<p>Forward secrecy allows the web browser and server to negotiate a key that never hits the wire, and is destroyed at the end of the session. This makes the only way to decrypt the communication is to break the session keys themselves.</p>
+<p>Enabling forward secrecy can be done in two steps:</p>
+<ul>
+<li>Configure your server to actively select the most desirable suite from the list offered by SSL clients.</li>
+<li>Put ECDHE and DHE suites to the top of your list. (The order is important; because ECDHE suites are faster, you want to use them whenever clients supports them.)</li>
+</ul>
+<p><strong>What you need to know:</strong>  If you go with one of the Mozilla recommended configurations, you support forward secrecy.</p>
+<hr />
+<h2>Vulnerabilities</h2>
+<p>I’m not going to go into this super in depth because the scope has already creeped quite a bit, but here are a list of vulnerabilities and where you can read more:</p>
+<p>BEAST </p>
+<ul>
+<li><a href="https://blog.torproject.org/blog/tor-and-beast-ssl-attack">https://blog.torproject.org/blog/tor-and-beast-ssl-attack</a></li>
+</ul>
+<p>LUCKY13 </p>
+<ul>
+<li><a href="https://www.imperialviolet.org/2013/02/04/luckythirteen.html">https://www.imperialviolet.org/2013/02/04/luckythirteen.html</a></li>
+</ul>
+<p>CRIME</p>
+<ul>
+<li><a href="https://community.qualys.com/blogs/securitylabs/2012/09/14/crime-information-leakage-attack-against-ssltls">https://community.qualys.com/blogs/securitylabs/2012/09/14/crime-information-leakage-attack-against-ssltls</a></li>
+</ul>
+<p>BREACH</p>
+<ul>
+<li><a href="http://breachattack.com">http://breachattack.com</a></li>
+</ul>
+<p>POODLE</p>
+<ul>
+<li><a href="https://tls.mbed.org/tech-updates/blog/sslv3-and-poodle-in-perspective">https://tls.mbed.org/tech-updates/blog/sslv3-and-poodle-in-perspective</a></li>
+</ul>
+<p>Sam’s note: What stupid fucking names for vulnerabilities.</p>
+<hr />
+<h2>DO NOT USE</h2>
+<p>Things you should stop using… from Mozilla:</p>
+<ul>
+<li><code>aNULL</code> contains non-authenticated Diffie-Hellman key exchanges, that are subject to Man-In-The-Middle (MITM) attacks</li>
+<li><code>eNULL</code> contains null-encryption ciphers (cleartext)</li>
+<li><code>EXPORT</code> are legacy weak ciphers that were marked as exportable by US law</li>
+<li><code>RC4</code> contains ciphers that use the deprecated ARCFOUR algorithm</li>
+<li><code>DES</code> contains ciphers that use the deprecated Data Encryption Standard</li>
+<li><code>SSLv2</code> contains all ciphers that were defined in the old version of the SSL standard, now deprecated</li>
+<li><code>MD5</code> contains all the ciphers that use the deprecated message digest 5 as the hashing algorithm</li>
+</ul>
+<hr />
+<h2>Mozilla Again</h2>
+<p>I’m just going to leave this here… because it’s that important.</p>
+<p><a href="https://wiki.mozilla.org/Security/Server_Side_TLS">https://wiki.mozilla.org/Security/Server_Side_TLS</a></p>
+<hr />
+<h2>Tools</h2>
+<p>If you’ve made it this far, congratulations. You may need to know way more than you need to, or you may have skimmed to the bottom. Either way, let’s get into some of the neat tools to help you configure and test your SSL setup.</p>
+<hr />
+<h2>DNSimple SSL installation wizard</h2>
+<p>If you’re a customer of DNSimple, use the configuration wizard. Enough said. </p>
+<p><a href="http://blog.dnsimple.com/2014/10/ssl-certificate-installation-wizard/">http://blog.dnsimple.com/2014/10/ssl-certificate-installation-wizard/</a></p>
+<hr />
+<h2>Cloudflare SSL</h2>
+<p>Cloud flare cannot make it any brain dead simple for you to add SSL. I use Cloudflare Full SSL (strict). There’s no excuse for at least setting up their Universal SSL.</p>
+<p><a href="https://www.cloudflare.com/ssl">https://www.cloudflare.com/ssl</a></p>
+<hr />
+<h2>Mozilla SSL Configuration Generator</h2>
+<p>If you’re setting up your SSL configuration from scratch, just use the super cool Mozilla generator and call it good. It supports Apache, Nginx, &amp; HAProxy.</p>
+<p><a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">https://mozilla.github.io/server-side-tls/ssl-config-generator/</a></p>
+<hr />
+<h2>SSL Labs</h2>
+<p>SSL Labs: <a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></p>
+<p>Also rebranded by GlobalSign here: <a href="https://sslcheck.globalsign.com/en_US">https://sslcheck.globalsign.com/en_US</a></p>
+<hr />
+<h2>Cipherscan</h2>
+<p>Holy shit, I’ve finally made it to Cipherscan, which was the whole reason I started this ridiculous article to begin with.</p>
+<blockquote>
+<p>Cipherscan tests the ordering of the SSL/TLS ciphers on a given target, for all major versions of SSL and TLS. It also extracts some certificates informations, TLS options, OCSP stapling and more. Cipherscan is a wrapper above the <code>openssl s_client</code> command line.</p>
+</blockquote>
+<p>Let’s get it installed. Using Yosemite, open up your terminal and install <code>bash</code> and <code>coreutils</code> via homebrew:</p>
+<ul>
+<li><code>$ brew install bash</code></li>
+<li><code>$ brew install coreutils</code></li>
+</ul>
+<p>Next, clone the Cipherscan repo, and change into it’s directory:</p>
+<ul>
+<li><code>$ git clone https://github.com/jvehent/cipherscan.git</code></li>
+<li><code>$ cd cipherscan</code></li>
+</ul>
+<p>Perfect! There’s a lot we can do with Cipherscan, but all we’re going to use it for is testing the a site, and looking at what we can do to improve our configuration.</p>
+<p>Go ahead and try a command with the following structure:
+<code>cipherscan$  ./cipherscan DOMAIN.COM</code></p>
+<p><strong>Example:</strong> <code>./cipherscan snelling.io</code></p>
+<p><strong>Response:</strong></p>
+<pre><code>Target: snelling.io:443
+
+prio  ciphersuite                  protocols              pfs_keysize
+1     ECDHE-RSA-AES128-GCM-SHA256  TLSv1.2                ECDH,P-256,256bits
+2     ECDHE-RSA-AES128-SHA256      TLSv1.2                ECDH,P-256,256bits
+3     ECDHE-RSA-AES128-SHA         TLSv1,TLSv1.1,TLSv1.2  ECDH,P-256,256bits
+4     AES128-GCM-SHA256            TLSv1.2
+5     AES128-SHA256                TLSv1.2
+6     AES128-SHA                   TLSv1,TLSv1.1,TLSv1.2
+7     ECDHE-RSA-AES256-GCM-SHA384  TLSv1.2                ECDH,P-256,256bits
+8     ECDHE-RSA-AES256-SHA384      TLSv1.2                ECDH,P-256,256bits
+9     ECDHE-RSA-AES256-SHA         TLSv1,TLSv1.1,TLSv1.2  ECDH,P-256,256bits
+10    AES256-GCM-SHA384            TLSv1.2
+11    AES256-SHA256                TLSv1.2
+12    AES256-SHA                   TLSv1,TLSv1.1,TLSv1.2
+13    ECDHE-RSA-DES-CBC3-SHA       TLSv1,TLSv1.1,TLSv1.2  ECDH,P-256,256bits
+14    DES-CBC3-SHA                 TLSv1,TLSv1.1,TLSv1.2
+
+Certificate: trusted, 2048 bit, sha1WithRSAEncryption signature
+TLS ticket lifetime hint: 64800
+OCSP stapling: not supported
+Server side cipher ordering</code></pre>
+<p>So what does this tell us? It tells us exactly what cipher suites and protocols I use. Neat. Cloudflare is the top layer here, so that’s really what we’re seeing, but I digress.</p>
+<p>The truth is, this really means absolutely nothing to most people, so let’s try the second command with the following structure:
+<code>cipherscan$  ./analyze.py -t DOMAIN.COM</code></p>
+<p><strong>Example:</strong> <code>./analyze.py -t snelling.io</code></p>
+<p><strong>Response:</strong></p>
+<pre><code>snelling.io:443 has obscure or unknown ssl/tls
+
+Changes needed to match the old level:
+* consider enabling SSLv3
+
+Changes needed to match the intermediate level:
+* remove cipher ECDHE-RSA-DES-CBC3-SHA
+* consider using a SHA-256 certificate
+
+Changes needed to match the modern level:
+* remove cipher AES128-GCM-SHA256
+* remove cipher AES128-SHA256
+* remove cipher AES128-SHA
+* remove cipher AES256-GCM-SHA384
+* remove cipher AES256-SHA256
+* remove cipher AES256-SHA
+* remove cipher ECDHE-RSA-DES-CBC3-SHA
+* remove cipher DES-CBC3-SHA
+* disable TLSv1
+* use a SHA-256 certificate</code></pre>
+<p>So <a href="http://snelling.io">http://snelling.io</a> doesn’t match any of the Mozilla recommended levels per se, but it doesn’t return anything bad! Hey oh. Looks like CloudFlare is good enough to not have any vulnerabilities. </p>
+<p><a href="images/l5eq81lk1twq.png"><img src="images/l5eq81lk1twq.png" alt="" /></a></p>
+<p>Okay, to just show what kind of actionable results we can get out of this analyze query, how about we use it on something insecure, like our local Tinker Federal Credit Union Bank!</p>
+<p><strong>Query:</strong> <code>./analyze.py -t tinkerfcu.org</code></p>
+<p><strong>Response:</strong></p>
+<pre><code>tinkerfcu.org:443 has bad ssl/tls
+
+Things that are bad:
+* remove cipher RC4-SHA
+* remove cipher RC4-MD5
+* remove cipher DES-CBC3-MD5
+* disable SSLv2
+* don't use an untrusted or self-signed certificate</code></pre>
+<p>Just to be sure, let’s run a quick SSL Labs scan.</p>
+<p><a href="images/aplmuwunspxqq.png"><img src="images/aplmuwunspxqq.png" alt="" /></a></p>
+<p>Okay, so banks SSL might not be as great as we originally thought. Hm. But surely an IT Department at a higher learning institution can get this right…</p>
+<p><strong>Example:</strong> <code>./analyze.py -t app.it.okstate.edu</code></p>
+<p><strong>Response:</strong></p>
+<pre><code>app.it.okstate.edu:443 has bad ssl/tls
+
+Things that are bad:
+* remove cipher RC4-SHA
+* remove cipher RC4-MD5
+* remove cipher EDH-RSA-DES-CBC3-SHA
+* remove cipher EDH-RSA-DES-CBC-SHA
+* remove cipher DES-CBC-SHA
+* remove cipher EXP-EDH-RSA-DES-CBC-SHA
+* remove cipher EXP-DES-CBC-SHA
+* remove cipher EXP-RC2-CBC-MD5
+* remove cipher EXP-RC4-MD5
+* remove cipher RC2-CBC-MD5
+* remove cipher DES-CBC3-MD5
+* remove cipher DES-CBC-MD5
+* disable SSLv2
+* don't use an untrusted or self-signed certificate
+* don't use DHE smaller than 1024bits or ECC smaller than 160bits
+</code></pre>
+<p><a href="images/7mwvkhq2mj2thw.png"><img src="images/7mwvkhq2mj2thw.png" alt="" /></a></p>
+<p>... They really make it too easy to clown on them.</p>
+<hr />
+<h1>Conclusion</h1>
+<p>We shouldn’t tolerate insecure bullshit connections from banks and other websites. At the end of the day, use the tools and standard configurations to help aid the process. There are plenty of tools here to get you started down the right path in checking your own configuration.</p>
+<p>Interested in hearing thoughts on twitter @snellingio.</p></div>
+
+<div class="article">
+    <hr>
+    <div class="footer">
+                <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>
+        <p>pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4</p>
+        <p>&copy;&nbsp;&nbsp;2011-2017&nbsp;&nbsp;Sam Snelling.&nbsp;&nbsp;All rights reserved.</p>
+        <p>Proudly written in Oklahoma.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101023701);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101023701ns.gif" /></p></noscript>

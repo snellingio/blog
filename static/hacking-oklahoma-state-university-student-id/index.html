@@ -1,0 +1,351 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hacking Oklahoma State University’s Student ID | Sam Snelling</title>
+    <meta property="og:title" content="Hacking Oklahoma State University’s Student ID | Sam Snelling">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@snellingio">
+    <meta name="twitter:creator" content="@snellingio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        a,code,kbd,pre,samp{overflow-wrap:break-word;word-wrap:break-word}.article,pre{padding:10px}a,code,kbd,pre,samp{word-wrap:break-word}img,pre{display:block}body{font-family:'Avenir Next',HelveticaNeue-Light,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.125em;color:#222;margin:0}.article{max-width:620px;margin:0 auto}a{color:#36b}a.page{font-size:1.3em}hr{margin:50px}h1,h2{font-size:1.5em;line-height:1.25;font-weight:500}h2 a,h2 a:active,h2 a:visited{color:#000;text-decoration:none}h3{font-size:1.25em;font-weight:600;margin-top:2em;margin-bottom:1em}h1:first-of-type{font-size:2em;margin-top:50px;margin-bottom:50px;font-weight:600}strong{font-weight:500}blockquote{margin:0 18px 18px;color:#666;padding-left:10px;border-left:4px solid #eee}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;word-break:break-all}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;overflow:scroll}pre code{padding:0;font-size:inherit;border-radius:0;color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}.header,.header a,.header a:visited{color:#fff}img{max-width:100%;height:auto}.header{background:#509EE3}.footer{text-align:center}.red,.red a{color:#e55235!important;font-weight:700}.green,.green a{color:#00AF45!important;font-weight:700}p{font-size:20px;line-height:1.6em}a[href^="//"]:after,a[href^="http://"]:after,a[href^="https://"]:after{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAV0lEQVR4Xq2QwQ2AAAwC3cmd2Kk7sRP64CEJ9qOX8OPatMc/QKppnEPhTmJh23CLiwAqIw21CybKQ28qQi37WGFYBJcwfJQpP8LlEHKyZMF0IdmF13zlAjZ/6H4wb+mUAAAAAElFTkSuQmCC);margin:0 0 0 5px}a[href^="https://snelling.io/"]:after,a[href^="//snelling.io/"]:after,a[href^="http://snelling.io/"]:after{content:'';margin:0}
+    </style>
+<body>
+<div class="header">
+    <div class="article">
+        <h2><a href="/">Sam Snelling</a></h2>
+        <p><i>The John Wick of PHP Software Development</i></p>
+    </div>
+</div>
+
+<div class="article">
+    <h1>Hacking Oklahoma State University’s Student ID</h1>
+<h2>Introduction</h2>
+<p>READ THIS AFTER - a full follow up here: <a href="http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id">http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id</a></p>
+<p>In 2013 I took an Information Security class at Oklahoma State University. As a final project, we were broken into teams to find a security hole, and have a plan to theoretically exploit it.</p>
+<p>I led this project, and in early 2014, gave a presentation to key faculty and IT security on campus. As I understand it, the final solution was to take down the website (<a href="https://app.it.okstate.edu/idcard/">https://app.it.okstate.edu/idcard/</a>), and not worry about the rest. Fair enough.</p>
+<p>EDIT: Many have asked, here is a quote from <a href="http://it.okstate.edu/policies/pol_osuid.php">http://it.okstate.edu/policies/pol_osuid.php</a></p>
+<blockquote>
+<p>Disclaimers - The Oklahoma State University ID Services office is not liable for financial loss or criminal repercussions associated with lost, stolen, damaged, or fraudulently used OSU ID Cards. Personal information is kept secure and confidential at ID Services. Outside parties are not privileged to personal or account information unless express consent is granted or the University is required to comply with legal or government agencies.</p>
+</blockquote>
+<p>Here are the contents of my final report.</p>
+<hr />
+<h2>Magnetic Stripe Primer</h2>
+<p>Section via Wikipedia <a href="http://en.wikipedia.org/wiki/Magnetic_stripe_card">http://en.wikipedia.org/wiki/Magnetic_stripe_card</a></p>
+<p>A magnetic stripe card is a type of card capable of storing data by modifying the magnetism of tiny iron-based magnetic particles on a band of magnetic material on the card. The magnetic stripe, sometimes called swipe card or magstripe, is read by swiping past a magnetic reading head. </p>
+<p>Magstripes come in two main varieties: high-coercivity (HiCo) and low-coercivity (LoCo). High-coercivity magstripes require higher amount of magnetic energy to encode, and therefore are harder to erase. HiCo stripes are appropriate for cards that are frequently used, such as a credit card. Low-coercivity magstripes require a lower amount of magnetic energy to record, and hence the card writers are much cheaper than machines which are capable of recording high-coercivity magstripes. However, LoCo cards are much easier to erase and have a shorter lifespan. </p>
+<p>A card reader can read either type of magstripe, and a high-coercivity card writer may write both high and low-coercivity cards (most have two settings, but writing a LoCo card in HiCo may sometimes work), while a low-coercivity card writer may write only low-coercivity cards. In practical terms, usually low coercivity magnetic stripes are a light brown color, and high coercivity stripes are nearly black.</p>
+<p>There are up to three tracks on magnetic cards known as tracks 1, 2, and 3. (Sam’s Note: Track 3 is rarely ever used in the United States)</p>
+<p>Track 1, Format B:</p>
+<ul>
+<li>Start sentinel — one character (generally '%')</li>
+<li>Format code=&quot;B&quot; — one character (alpha only)</li>
+<li>Primary account number (PAN) — up to 19 characters. Usually, but not always, matches the credit card number printed on the front of the card.</li>
+<li>Field Separator — one character (generally '^')</li>
+<li>Name — two to 26 characters</li>
+<li>Field Separator — one character (generally '^')</li>
+<li>Expiration date — four characters in the form YYMM.</li>
+<li>Service code — three characters</li>
+<li>Discretionary data — may include Pin Verification Key Indicator (PVKI, 1 character), PIN Verification Value (PVV, 4 characters), Card Verification Value or Card Verification Code (CVV or CVC, 3 characters)</li>
+<li>End sentinel — one character (generally '?')</li>
+<li>Longitudinal redundancy check (LRC) — it is one character and a validity character calculated from other data on the track. </li>
+</ul>
+<p>Track 2:</p>
+<ul>
+<li>Start sentinel — one character (generally ';')</li>
+<li>Primary account number (PAN) — up to 19 characters. Usually, but not always, matches the credit card number printed on the front of the card.</li>
+<li>Separator — one char (generally '=')</li>
+<li>Expiration date — four characters in the form YYMM.</li>
+<li>Service code — three digits. The first digit specifies the interchange rules, the second specifies authorization processing and the third specifies the range of services</li>
+<li>Discretionary data — as in track one</li>
+<li>End sentinel — one character (generally '?')</li>
+<li>Longitudinal redundancy check (LRC) — it is one character and a validity character calculated from other data on the track. Most reader devices do not return this value when the card is swiped to the presentation layer, and use it only to verify the input internally to the reader. </li>
+</ul>
+<p>Service code values common in financial cards:</p>
+<p>First digit</p>
+<pre><code>1: International interchange OK
+
+2: International interchange, use IC (chip) where feasible
+
+5: National interchange only except under bilateral agreement
+
+6: National interchange only except under bilateral agreement, use IC (chip) where feasible
+
+7: No interchange except under bilateral agreement (closed loop)
+
+9: Test</code></pre>
+<p>Second digit</p>
+<pre><code>0: Normal
+
+2: Contact issuer via online means
+
+4: Contact issuer via online means except under bilateral agreement</code></pre>
+<p>Third digit</p>
+<pre><code>0: No restrictions, PIN required
+
+1: No restrictions
+
+2: Goods and services only (no cash)
+
+3: ATM only, PIN required
+
+4: Cash only
+
+5: Goods and services only (no cash), PIN required
+
+6: No restrictions, use PIN where feasible
+
+7: Goods and services only (no cash), use PIN where feasible</code></pre>
+<hr />
+<h2>Oklahoma State ID Card</h2>
+<p>The OSU ID Card is the official identification card for Oklahoma State University. Your ID Card can be used for: </p>
+<ul>
+<li>Photo identification</li>
+<li>Access to certain buildings and facilities on campus</li>
+<li>Charges to your OSU Bursar account</li>
+<li>Access to a variety of campus events and services
+Via <a href="http://it.okstate.edu/services/id/">http://it.okstate.edu/services/id/</a> </li>
+</ul>
+<p><a href="/images/ytayjecoyy9hq.jpg"><img src="/images/ytayjecoyy9hq.jpg" alt="" /></a></p>
+<p>(Photo of an Oklahoma State ID Card -- Note bottom right corner: “Card: 6038 3800 0534 5615”)</p>
+<hr />
+<h2>Hypothesis</h2>
+<ul>
+<li>Every Oklahoma State student / faculty identification card (“ID Card”) is inherently insecure. </li>
+<li>Every ID Card is unique only by the card number -- which is 16 digits long. </li>
+<li>By exploiting the ID Card, one could cause massive theft, damage, and trespass into secure areas.</li>
+<li>One would not get caught, and no one would notice until it is too late. </li>
+</ul>
+<hr />
+<h2>Research</h2>
+<p>Every ID Card has a card number starting with 6038 3800 that will be referred to as the “Base Number”. The only exception to the Base Number is the ID Card that are not issued by Oklahoma State -- And are instead issued by Stillwater National Bank and act as a student’s actual bank card as well.</p>
+<p>Out of the next eight digits, the first two numbers will be referred to as the “Head Number.” Out of the ID Cards that have been analyzed (&gt;100), there have only been three Head Numbers: 05, 06, 11. </p>
+<p>The last six digits will be referred to as the “Tail Number.” The tail number can contain any digit 0-9, 10 combinations per number. Doing the math 10^6 = 1 million possible combinations. </p>
+<p>With 3 possible Head Numbers * 1 million possible Tail Numbers = roughly 3 million possible ID Card numbers.</p>
+<p>Oklahoma State has printed on the back of every ID Card a link to the Oklahoma State web service to see if an ID is valid: <a href="https://app.it.okstate.edu/idcard/">https://app.it.okstate.edu/idcard/</a></p>
+<p><a href="images/wswnepovrzifq.png"><img src="images/wswnepovrzifq.png" alt="" /></a>
+This web service allows anyone to enter a 16 digit ID Card number, and see whether it is valid or invalid.</p>
+<p>A valid card number will look similar to this:
+<a href="images/vbom0ved1dlcza.png"><img src="images/vbom0ved1dlcza.png" alt="" /></a></p>
+<p>Whereas an invalid card number will look similar to this:
+<a href="images/igzsxqsfdcgorw.png"><img src="images/igzsxqsfdcgorw.png" alt="" /></a></p>
+<p>Querying to the web service returns the following information:</p>
+<ul>
+<li>Card Number: The ID Card number you just queried</li>
+<li>ID Card Status: “Valid” or “Invalid ID Number”</li>
+<li>Employment Status: The current employment status (by the university) of the card holder</li>
+<li>Student Status: The current enrollment status of the of the card holder</li>
+<li>Other: Whether or not there is anything special about the card -- Bank card, etc.</li>
+</ul>
+<p>The web service has a disclaimer at the top - “Use of this service is logged and tracked.” The assumption would be that Oklahoma State is logging IP addresses of every query to the service. There are two problems with this approach, with no solution:</p>
+<ul>
+<li>IP banning from a web service is only so effective as it is extremely easy to obtain an IP proxy list. An up-to-date list of over 300,000 proxies is $9/month. Via <a href="http://ninjaproxies.com/plans">http://ninjaproxies.com/plans</a> </li>
+<li>Good luck to Oklahoma State prosecuting as In 2011, Judge Harold Baker ruled that an IP address does not equal a person. Via <a href="http://torrentfreak.com/ip-address-not-a-person-bittorrent-case-judge-says-110503/">http://torrentfreak.com/ip-address-not-a-person-bittorrent-case-judge-says-110503/</a></li>
+</ul>
+<p>By purchasing a USB magnetic stripe reader for roughly $25 you are able to decode an ID Card. Via <a href="http://www.rakuten.com/prod/usb-3-track-magnetic-credit-card-reader/240738725.html">http://www.rakuten.com/prod/usb-3-track-magnetic-credit-card-reader/240738725.html</a></p>
+<p>This is what a ID Card looks like decoded:</p>
+<p><code> %B6038380006514029^SNELLING/SAMUEL R        ^491212000000000    000   ?;6038380006514029=49121200000000000000? </code></p>
+<p>By referencing the encoding structure, the ID Card follows the structure:
+Track one:</p>
+<ul>
+<li>%B</li>
+<li>ID CARD NUMBER</li>
+<li>^</li>
+<li>LAST/FIRST NAME</li>
+<li>^</li>
+<li>EXPIRATION DATE: 49/12</li>
+<li>SERVICE CODE: 120</li>
+<li>DISCRETIONARY DATA: 000000000     000   </li>
+<li>?
+Track 2:</li>
+<li>;</li>
+<li>ID CARD NUMBER</li>
+<li>=</li>
+<li>EXPIRATION DATE: 49/12</li>
+<li>SERVICE CODE: 120</li>
+<li>DISCRETIONARY DATA: 0000000000000</li>
+<li>?</li>
+</ul>
+<p>There are several issues with the current approach, but the most egregious two are:</p>
+<ul>
+<li>Everyone’s expiration data are the exact same - 49/12</li>
+<li>All discretionary data is blank </li>
+</ul>
+<hr />
+<h2>What we know</h2>
+<p>What we know up to this point is the following:</p>
+<ul>
+<li>Oklahoma State issues ID Cards to all students and faculty</li>
+<li>All ID Cards (with one exception) have a Base Number of 6038 3800</li>
+<li>All ID Cards have a Head Number of either: 05, 06, 11</li>
+<li>There are roughly 1 million Tail Numbers per Head Number combinations</li>
+<li>Oklahoma State has a web service that allows anyone over the internet to check the validity of an ID Card number</li>
+<li>This web service logs and tracks all queries, probably by IP</li>
+<li>All ID Cards have the exact same expiration date: 49/12</li>
+<li>All ID Cards have blank (0’s) discretionary data</li>
+</ul>
+<hr />
+<h2>Unitech MSRC206 &amp; SSI Technologies</h2>
+<p>Note: due to shipping delays of our MSRC206 (magnetic stripe card reader / writer), Sam had to travel to Oklahoma City to meet with SSI Technologies. SSI Technologies uses the MSRC206 exclusively for all testing, and encoded all of cards for us. Via <a href="http://www.ssicards.com/">http://www.ssicards.com/</a></p>
+<p>The MSRC206 is made by Unitech, and is a commercial grade magstripe reader / writer. What makes the MSRC206 a good choice for an encoder is that it supports both HiCo and LoCo cards, as well as has a strong enough encoder to overwrite existing HiCo cards. The MSRC206 retails for between $300-500 USD. Cheaper alternatives can be bought for under $200. Via <a href="http://www.newegg.com/Product/Product.aspx?Item=9SIA1EF0CD0616">http://www.newegg.com/Product/Product.aspx?Item=9SIA1EF0CD0616</a></p>
+<p>Using the MSRC206 is extremely simple as explained by this 2:00 Youtube video. Via <a href="http://www.youtube.com/watch?v=k2lZrkc0cwI">http://www.youtube.com/watch?v=k2lZrkc0cwI</a></p>
+<p>How to copy a magnetic stripe:
+You need a magnetic stripe card with data on it, and a blank magnetic stripe card</p>
+<ul>
+<li>Plug in MSRC206 to wall and into computer -- Allow drivers to install</li>
+<li>Install software included with MSRC206</li>
+<li>Wait for MSRC206 to connect to MSRC206 software</li>
+<li>Hit the “Read” button on right hand panel of software</li>
+<li>Swipe card with encoded data on it through</li>
+<li>Hit the “Write” button on right hand panel of software</li>
+<li>Swipe blank card though 
+After arriving at SSI technologies and getting a tour through the facilities, our team requested two different copies of Sam’s Oklahoma State University ID Card.</li>
+</ul>
+<p>Original data:</p>
+<p><code> %B6038380006514029^SNELLING/SAMUEL R        ^491212000000000    000   ?;6038380006514029=49121200000000000000? </code></p>
+<p>Copy onto blank card:</p>
+<p><code> %B6038380006514029^SNELLING/SAMUEL R        ^491212000000000    000   ?;6038380006514029=49121200000000000000? </code></p>
+<p>Copy with changed name onto blank card:</p>
+<p><code> %B6038380006514029^PETE/PISTOL              ^491212000000000    000 ?;6038380006514029=49121200000000000000? </code></p>
+<p>Side by side:</p>
+<p><code> %B6038380006514029^SNELLING/SAMUEL R        ^491212000000000    000   ?;6038380006514029=49121200000000000000? </code></p>
+<p><code> %B6038380006514029^PETE/PISTOL              ^491212000000000    000 ?;6038380006514029=49121200000000000000? </code></p>
+<p>There are two important differences to note:</p>
+<ul>
+<li>The name has been changed, but the card number has remained the same</li>
+<li>The spacing is <em>slightly</em> off on the pistol pete card due to an encoding error </li>
+</ul>
+<hr />
+<p><a href="images/m40zhc7baznug.jpg"><img src="images/m40zhc7baznug.jpg" alt="" /></a></p>
+<p>Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;</p>
+<p><a href="images/bxkcjbxbnsoakg.jpg"><img src="images/bxkcjbxbnsoakg.jpg" alt="" /></a></p>
+<p>Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;</p>
+<p>Note -- These are the cards used in when testing the hypothesis.</p>
+<hr />
+<h2>Testing the hypothesis</h2>
+<p>Our team set out to use the blank cards in various settings.</p>
+<p>First, our team tried to check out a Surface Pro from the library using the original ID Card. Since Sam had gotten a new ID Card only one day ago, he was not in the system. The Library technician asked if it was a “new ID Card” and that “the Library usually takes a few days to sync with new ID Cards.” What this tells us is that the Library does not check each and every transaction with the central ID Card server to make sure it is valid (since Sam’s original ID Card was valid). The assumption would be that the library downloads data dumps once every few days, and stores them on the computer to run a local check to allow students to check out items.</p>
+<p>Next, our team decided to use the “Pistol Pete” ID Card at both the Library Cafe and the Union Express on campus. Watch via <a href="http://youtu.be/Bw2Ugezb7Fs">http://youtu.be/Bw2Ugezb7Fs</a></p>
+<p>Several things are interesting about this test:</p>
+<ol>
+<li>Staff of the university accepted a blank ID Card</li>
+<li>Even while the ID Card had the name “PETE/PISTOL” encoded on it, when used the transaction still appears under Sam’s name. 
+This tells us that the point of sales systems check with the server each transaction to make sure the card is valid, however it does not check the name of the card to make sure it is the same on both server and card.</li>
+</ol>
+<hr />
+<h2>What we know (again)</h2>
+<p>What we know up to this point is the following:</p>
+<ul>
+<li>Oklahoma State issues ID Cards to all students and faculty</li>
+<li>All ID Cards (with one exception) have a Base Number of 6038 3800</li>
+<li>All ID Cards have a Head Number of either: 05, 06, 11</li>
+<li>There are roughly 1 million Tail Numbers per Head Number combinations</li>
+<li>Oklahoma State has a web service that allows anyone over the internet to check the validity of an ID Card number</li>
+<li>This web service logs and tracks all queries, probably by IP</li>
+<li>All ID Cards have the exact same expiration date: 49/12</li>
+<li>All ID Cards have blank (0’s) discretionary data</li>
+<li>The Unitech MSRC206 can read, edit, encode, and re-encode magnetic stripes</li>
+<li>The Library does not verify each ID Card transaction with a central server</li>
+<li>Staff of the university accepted a blank ID Card</li>
+<li>Point of sales systems verify each ID Card transaction with a central server</li>
+<li>Point of sales systems do not validate the name on an ID Card</li>
+</ul>
+<hr />
+<h2>Theoretically exploiting the system</h2>
+<p>Now with everything that we know, it is possible to start harvesting ID Card numbers from <a href="https://app.it.okstate.edu/idcard/">https://app.it.okstate.edu/idcard/</a> using a basic Node.js web scraper. I have written 15 lines of code to take advantage of this web service. </p>
+<pre><code>var cheerio = require('cheerio'), 
+request = require('request'), 
+fs = require('fs'), 
+headnumber = '06';
+
+for (var i=1; i &lt;= 100; i += 1){
+    var tailnumber = '';
+    while (tailnumber.length &lt; 6) 
+    tailnumber = tailnumber + '' + [0,1,2,3,4,5,6,7,8,9][Math.floor(Math.random()*9)];
+    request.post('https://app.it.okstate.edu/idcard/index.php/module/Default/action/IDCardEntry', {form:{card_id:'60383800'+headnumber+tailnumber}}, function (error, response, html) {
+        if (!error &amp;&amp; response.statusCode == 200) {
+            var $ = ch3eerio.load(html);
+            $('td.formText').each(function() {
+                var text = $(this).next().text();
+                fs.appendFile('osu_ids.txt', text+';', function(err){});
+            });
+            fs.appendFile('osu_ids.txt', '\r\n', function(err){});
+        }
+    }); 
+}
+</code></pre>
+<p>This code will essentially generate random Tail Numbers with a specified Head Number and log the result. After testing the web service, we have determined that it will handle roughly 3-5 requests per second (this is pretty terrible, but understandable for a web service that is not supposed to be used). So if you assume roughly 1 Million Tail numbers per Head Number at 5 / sec, you could theoretically brute force every single valid ID Card in 2 days. By optimizing this algorithm, it is reasonable to expect that you can find thousands of valid ID Cards in less than an hour ON ONE MACHINE! Think if we spun up an entire cluster of systems on a cloud hosting service.</p>
+<p>You could then either</p>
+<ol>
+<li>Print your own ID Cards using other card numbers</li>
+<li>Re-encode your own ID Card with another card number by overwriting it with the MSCR206 
+As we have proved: 
+<ul>
+<li>Current systems do not check names on ID Cards</li>
+<li>All ID Cards have the same expiration dates and discretionary data</li>
+<li>Only the ID Card number itself is unique to the card</li>
+</ul></li>
+</ol>
+<hr />
+<h2>The threat is bigger than you think</h2>
+<p>Your ID Card gets you access to certain buildings and facilities on campus, allows you to charge items to your OSU Bursar account, and allows you access to a variety of campus events and services.</p>
+<p>Another thought experiment -- Has Oklahoma State made a giant mistake by letting students use ID Cards as football tickets?</p>
+<p>Every student organization that is currently keeping attendance through the Spears School of Business “checkout” magnetic stripe readers is currently sitting on a treasure trove of ID Card numbers. How is this data being handled? (I’m looking at you ISAC)</p>
+<p>So is the threat just that someone can steal some football tickets? What about charging hundreds of dollars worth of books to someone elses bursar? What about stealing thousands of dollars of equipment using others information from the Library or another building? What if someone could get access to the HBRC? What if I get the ID Card number to a faculty member? The possibilities here are limitless as we rely on this technology more and more.</p>
+<hr />
+<h2>Fixing the problem -- The right way</h2>
+<p>To be honest, you won’t like this answer.</p>
+<p>Here are the steps in order of importance:</p>
+<ul>
+<li>Take down <a href="https://app.it.okstate.edu/idcard/">https://app.it.okstate.edu/idcard/</a> TODAY!</li>
+<li>Go back to the drawing board on ID Cards</li>
+<li>Reissue everyone a new ID Card</li>
+<li>Audit all systems that touch ID Cards</li>
+<li>Get rid of any system that is not checking each transaction</li>
+<li>Please, for the love of god, do not make the transaction endpoint insecure</li>
+<li>Add a second form of verification </li>
+</ul>
+<p>Detailed responses:</p>
+<ul>
+<li>Take down <a href="https://app.it.okstate.edu/idcard/">https://app.it.okstate.edu/idcard/</a> TODAY! If you do not do this -- Everything is at risk. Seriously. As it currently sits, it is waiting to be scraped. It could theoretically be done by the time you are finished reading this document.</li>
+<li>Go back to the drawing board on ID Cards. How we are currently doing it is WRONG. Everyone needs their own expiration date. Discretionary data should include a “check digit.” Here are two links that need to be read over before even talking. See links below:
+<ul>
+<li>Luhn’s Algorithm: <a href="http://en.wikipedia.org/wiki/Luhn_algorithm">http://en.wikipedia.org/wiki/Luhn_algorithm</a></li>
+<li>Magnetic Stripe Examples: <a href="http://www.gae.ucm.es/~padilla/extrawork/magexam1.html">http://www.gae.ucm.es/~padilla/extrawork/magexam1.html</a></li>
+</ul></li>
+<li>Reissue everyone a new ID Card. This needs to happen. If you only take down the website -- and do not reissue everyone a new ID Card -- All someone has to do is read the last 6-8 digits off your card, and then go home and encode it. If you do not reissue cards, everyone will still be at risk.</li>
+<li>Audit all systems that touch ID Cards. The Library’s system, All door code readers, All POS systems,
+-All data needs to be verified on each swipe. Including the name. Also, no device should be able to store a dump of ID Card numbers / data on it.</li>
+<li>Get rid of any system that is not checking each transaction. This goes back to no device should be able to store a dump of ID Card numbers / data on it. If someone is able to get their hands on a dump of that data -- Everything is compromised. Even if you reissue everyone a new ID Card, and add a check digit… a copy of a card will be a copy of a card.</li>
+<li>Please, for the love of god, do not make the transaction endpoint insecure. So now that you’ve added check digits, and made all the systems check with the server to make sure they are all allowed, you will have systems like the Library that you will have to rewrite code for. MAKE SURE THE ENDPOINT IS SECURE. If you aren’t encrypting the data before it goes over the wire, and also using SSL, the system is again broken. Make sure you secure the endpoint properly.</li>
+<li>Lastly, add a second form of verification. Make people use a PIN number when making transactions. That’s a pretty good way to combat this from all sides. Yes, someone can still find out your pin and clone your ID -- But you’ve made it 1000x stronger than what it was. Another idea is to add a barcode to each ID Card that needs to be scanned in as well (think of it as a 2 step verification). </li>
+</ul>
+<hr />
+<h2>Following up</h2>
+<p>A full follow up here: <a href="http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id">http://snelling.io/following-up-hacking-oklahoma-state-universitys-student-id</a></p></div>
+
+<div class="article">
+    <hr>
+    <div class="footer">
+                <p><a href="mailto:sam@snelling.com">Email</a>, <a href="https://twitter.com/@snellingio">Twitter</a></p>
+        <p>pgp: 38E0 0D78 326C F14B C7A1 BA06 3696 BFC7 1915 95E4</p>
+        <p>&copy;&nbsp;&nbsp;2011-2017&nbsp;&nbsp;Sam Snelling.&nbsp;&nbsp;All rights reserved.</p>
+        <p>Proudly written in Oklahoma.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101023701);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101023701ns.gif" /></p></noscript>
