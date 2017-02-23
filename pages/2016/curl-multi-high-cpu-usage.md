@@ -2,11 +2,11 @@
 
 I recently switched most of my self hosted webapps to a dedicated OVH box when EmbedKit usage started to pick up. One oddity is that CPU usage was really high.
 
-[![Screen Shot 2016-06-01 at 1.22.38 PM.png](images/tizolvasjfzucw.png)](images/tizolvasjfzucw.png)
+[![Screen Shot 2016-06-01 at 1.22.38 PM.png](/images/tizolvasjfzucw.png)](/images/tizolvasjfzucw.png)
 
 So I dug in a little bit. I tried tweaking the fpm worker pool. I tried tweaking some php-fpm settings. No dice. So I used the <a href="https://blackfire.io/">Blackfire.io</a> profiler to dig down into what was going on.
 
-[![Screen Shot 2016-06-07 at 7.38.10 AM.png](images/hngl2mejqbfiw.png)](images/hngl2mejqbfiw.png)
+[![Screen Shot 2016-06-07 at 7.38.10 AM.png](/images/hngl2mejqbfiw.png)](/images/hngl2mejqbfiw.png)
 
 What I noticed pretty quick (aside from composer not being optimized), was that `curl_multi_exec` was taking up most of the cpu time. This is exactly what I expected, after all, the entire codebase only takes 20-50ms to execute.  What I didn't expect is the super high cpu usage when throughput increased to 10-20 requests a second.
 
@@ -44,7 +44,7 @@ while ($active && $mrc == CURLM_OK) {
 
 And now the CPU is happy. Load went from 5-7 down to roughy 1.
 
-[![2.png](images/mapxju5kqzjha.png)](images/mapxju5kqzjha.png)
+[![2.png](/images/mapxju5kqzjha.png)](/images/mapxju5kqzjha.png)
 
-[![1.png](images/9hdy0jetax6z4q.png)](images/9hdy0jetax6z4q.png)
+[![1.png](/images/9hdy0jetax6z4q.png)](/images/9hdy0jetax6z4q.png)
 

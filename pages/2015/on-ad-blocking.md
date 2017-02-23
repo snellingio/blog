@@ -20,7 +20,7 @@ Now that we understand a little more about how the business side of this works, 
 
 My public IP is `98.168.143.37` which you can easily get from just googling “what’s my ip.”
 
-[![whatsmyip.png](images/rzm0vq0gs3yiwq.png)](images/rzm0vq0gs3yiwq.png)
+[![](/images/rzm0vq0gs3yiwq.png)](/images/rzm0vq0gs3yiwq.png)
 
 -----
 
@@ -131,7 +131,7 @@ And get back the following information:
 
 So each and every web request I make to any website, can find out my city, state, zip code, internet service provider, time zone, average city income, average population, and if I’m residential. Technically I’m in Oklahoma City a hundred miles north of Duncan, but other IP services actually get it right.
 
-[![ipinfo.png](images/i8x89cwcqtp79q.png)](images/i8x89cwcqtp79q.png)
+[![](/images/i8x89cwcqtp79q.png)](/images/i8x89cwcqtp79q.png)
 
 ```
 curl ipinfo.io
@@ -153,7 +153,7 @@ curl ipinfo.io
 
 Okay, so what else can you find out from my ip address if you know my location? Let’s try out a quick inclusive wolfram search.
 
-[![wolfram.jpg](images/yirzkri3vdlftq.jpg)](images/yirzkri3vdlftq.jpg)
+[![](/images/yirzkri3vdlftq.jpg)](/images/yirzkri3vdlftq.jpg)
 
 Each and every web request I make, you can potentially find out county information, race and demographics information, educational attainment, income statistics, economic statistics, crime rates, etc. Not only that, you can link my data with other ip addresses within a certain geo radius.
 
@@ -171,7 +171,7 @@ We’ve touched on privacy, let’s touch on safety and speed.
 
 Look at the graphic below, and then go read this article from where I took the graphic from: [https://www.raymond.cc/blog/10-ad-blocking-extensions-tested-for-best-performance/view-all/]
 
-[![chrome_ad_blocker_combined_scores.png](images/w3gtswjmtrds6q.png)](images/w3gtswjmtrds6q.png)
+[![](/images/w3gtswjmtrds6q.png)](/images/w3gtswjmtrds6q.png)
 
 -----
 

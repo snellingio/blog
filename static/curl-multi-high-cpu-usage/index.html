@@ -24,9 +24,9 @@
 <div class="article">
     <h1>cURL multi &amp; high CPU usage</h1>
 <p>I recently switched most of my self hosted webapps to a dedicated OVH box when EmbedKit usage started to pick up. One oddity is that CPU usage was really high.</p>
-<p><a href="images/tizolvasjfzucw.png"><img src="images/tizolvasjfzucw.png" alt="Screen Shot 2016-06-01 at 1.22.38 PM.png" /></a></p>
+<p><a href="/images/tizolvasjfzucw.png"><img src="/images/tizolvasjfzucw.png" alt="Screen Shot 2016-06-01 at 1.22.38 PM.png" /></a></p>
 <p>So I dug in a little bit. I tried tweaking the fpm worker pool. I tried tweaking some php-fpm settings. No dice. So I used the <a href="https://blackfire.io/">Blackfire.io</a> profiler to dig down into what was going on.</p>
-<p><a href="images/hngl2mejqbfiw.png"><img src="images/hngl2mejqbfiw.png" alt="Screen Shot 2016-06-07 at 7.38.10 AM.png" /></a></p>
+<p><a href="/images/hngl2mejqbfiw.png"><img src="/images/hngl2mejqbfiw.png" alt="Screen Shot 2016-06-07 at 7.38.10 AM.png" /></a></p>
 <p>What I noticed pretty quick (aside from composer not being optimized), was that <code>curl_multi_exec</code> was taking up most of the cpu time. This is exactly what I expected, after all, the entire codebase only takes 20-50ms to execute.  What I didn't expect is the super high cpu usage when throughput increased to 10-20 requests a second.</p>
 <p>Google Fu brought me a <a href="https://github.com/guzzle/guzzle/issues/756#issuecomment-50903455">github issue in a Guzzle thread from 2014</a>:</p>
 <blockquote>
@@ -54,8 +54,8 @@ while ($active &amp;&amp; $mrc == CURLM_OK) {
     } while ($mrc == CURLM_CALL_MULTI_PERFORM);
 }</code></pre>
 <p>And now the CPU is happy. Load went from 5-7 down to roughy 1.</p>
-<p><a href="images/mapxju5kqzjha.png"><img src="images/mapxju5kqzjha.png" alt="2.png" /></a></p>
-<p><a href="images/9hdy0jetax6z4q.png"><img src="images/9hdy0jetax6z4q.png" alt="1.png" /></a></p></div>
+<p><a href="/images/mapxju5kqzjha.png"><img src="/images/mapxju5kqzjha.png" alt="2.png" /></a></p>
+<p><a href="/images/9hdy0jetax6z4q.png"><img src="/images/9hdy0jetax6z4q.png" alt="1.png" /></a></p></div>
 
 <div class="article">
     <hr>

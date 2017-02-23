@@ -249,7 +249,7 @@ Changes needed to match the modern level:
 * disable TLSv1
 * use a SHA-256 certificate</code></pre>
 <p>So <a href="http://snelling.io">http://snelling.io</a> doesn’t match any of the Mozilla recommended levels per se, but it doesn’t return anything bad! Hey oh. Looks like CloudFlare is good enough to not have any vulnerabilities. </p>
-<p><a href="images/l5eq81lk1twq.png"><img src="images/l5eq81lk1twq.png" alt="" /></a></p>
+<p><a href="/images/l5eq81lk1twq.png"><img src="/images/l5eq81lk1twq.png" alt="" /></a></p>
 <p>Okay, to just show what kind of actionable results we can get out of this analyze query, how about we use it on something insecure, like our local Tinker Federal Credit Union Bank!</p>
 <p><strong>Query:</strong> <code>./analyze.py -t tinkerfcu.org</code></p>
 <p><strong>Response:</strong></p>
@@ -262,7 +262,7 @@ Things that are bad:
 * disable SSLv2
 * don't use an untrusted or self-signed certificate</code></pre>
 <p>Just to be sure, let’s run a quick SSL Labs scan.</p>
-<p><a href="images/aplmuwunspxqq.png"><img src="images/aplmuwunspxqq.png" alt="" /></a></p>
+<p><a href="/images/aplmuwunspxqq.png"><img src="/images/aplmuwunspxqq.png" alt="" /></a></p>
 <p>Okay, so banks SSL might not be as great as we originally thought. Hm. But surely an IT Department at a higher learning institution can get this right…</p>
 <p><strong>Example:</strong> <code>./analyze.py -t app.it.okstate.edu</code></p>
 <p><strong>Response:</strong></p>
@@ -285,7 +285,7 @@ Things that are bad:
 * don't use an untrusted or self-signed certificate
 * don't use DHE smaller than 1024bits or ECC smaller than 160bits
 </code></pre>
-<p><a href="images/7mwvkhq2mj2thw.png"><img src="images/7mwvkhq2mj2thw.png" alt="" /></a></p>
+<p><a href="/images/7mwvkhq2mj2thw.png"><img src="/images/7mwvkhq2mj2thw.png" alt="" /></a></p>
 <p>... They really make it too easy to clown on them.</p>
 <hr />
 <h1>Conclusion</h1>

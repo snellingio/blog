@@ -127,14 +127,14 @@ With 3 possible Head Numbers * 1 million possible Tail Numbers = roughly 3 milli
 
 Oklahoma State has printed on the back of every ID Card a link to the Oklahoma State web service to see if an ID is valid: https://app.it.okstate.edu/idcard/
 
-[![](images/wswnepovrzifq.png)](images/wswnepovrzifq.png)
+[![](/images/wswnepovrzifq.png)](/images/wswnepovrzifq.png)
 This web service allows anyone to enter a 16 digit ID Card number, and see whether it is valid or invalid.
 
 A valid card number will look similar to this:
-[![](images/vbom0ved1dlcza.png)](images/vbom0ved1dlcza.png)
+[![](/images/vbom0ved1dlcza.png)](/images/vbom0ved1dlcza.png)
 
 Whereas an invalid card number will look similar to this:
-[![](images/igzsxqsfdcgorw.png)](images/igzsxqsfdcgorw.png)
+[![](/images/igzsxqsfdcgorw.png)](/images/igzsxqsfdcgorw.png)
 
 Querying to the web service returns the following information:
 - Card Number: The ID Card number you just queried
@@ -247,11 +247,11 @@ There are two important differences to note:
 
 ---------------------------------------
 
-[![](images/m40zhc7baznug.jpg)](images/m40zhc7baznug.jpg)
+[![](/images/m40zhc7baznug.jpg)](/images/m40zhc7baznug.jpg)
 
 Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;
 
-[![](images/bxkcjbxbnsoakg.jpg)](images/bxkcjbxbnsoakg.jpg)
+[![](/images/bxkcjbxbnsoakg.jpg)](/images/bxkcjbxbnsoakg.jpg)
 
 Top left - Copy of ID Card with “Pistol Pete” encoded; Top right - Copy of ID Card; Bottom left - ID Card; Bottom right - Copy of ID Card;
 

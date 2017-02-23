@@ -57,16 +57,16 @@ I mentioned at the beginning that over 17,000 unique visitors read the article. 
 - Clicky Analytics
 
 Google Analytics gives a really good view of the statistical demographic of people who read the original report:
-[![Screenshot 2015-02-24 19.15.20.png](images/quuulf90fuczew.png)](images/quuulf90fuczew.png)
+[![](/images/quuulf90fuczew.png)](/images/quuulf90fuczew.png)
 
 But, I was only interested in seeing if anyone at Oklahoma State read it.
 
 Clicky allows us to dig a little deeper and actually export JSON data from our our analytical report!
-[![Screenshot 2015-02-24 19.16.25.png](images/kj4j6dhemn8gnw.png)](images/kj4j6dhemn8gnw.png)
-[![Screenshot 2015-02-24 19.12.28.png](images/cdtkjlfstqeua.png)](images/cdtkjlfstqeua.png)
+[![](/images/kj4j6dhemn8gnw.png)](/images/kj4j6dhemn8gnw.png)
+[![](/images/cdtkjlfstqeua.png)](/images/cdtkjlfstqeua.png)
 
 So now we have a list of IP addresses. Okay, but what do a bunch of little numbers tell us about who is reading the report? Now comes in the fun `nslookup` command. It allows us to query a DNS server and see if we can get a hostname for the IP.
-[![Screenshot 2015-02-24 13.10.27.png](images/8pcdba4yu816a.png)](images/8pcdba4yu816a.png)
+[![](/images/8pcdba4yu816a.png)](/images/8pcdba4yu816a.png)
 
 Hah, turns out that all of the external OSU IP’s have a hostname. Perfect. 
 

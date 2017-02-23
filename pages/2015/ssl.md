@@ -284,7 +284,7 @@ Changes needed to match the modern level:
 
 So http://snelling.io doesn’t match any of the Mozilla recommended levels per se, but it doesn’t return anything bad! Hey oh. Looks like CloudFlare is good enough to not have any vulnerabilities. 
 
-[![](images/l5eq81lk1twq.png)](images/l5eq81lk1twq.png)
+[![](/images/l5eq81lk1twq.png)](/images/l5eq81lk1twq.png)
 
 
 Okay, to just show what kind of actionable results we can get out of this analyze query, how about we use it on something insecure, like our local Tinker Federal Credit Union Bank!
@@ -306,7 +306,7 @@ Things that are bad:
 
 Just to be sure, let’s run a quick SSL Labs scan.
 
-[![](images/aplmuwunspxqq.png)](images/aplmuwunspxqq.png)
+[![](/images/aplmuwunspxqq.png)](/images/aplmuwunspxqq.png)
 
 Okay, so banks SSL might not be as great as we originally thought. Hm. But surely an IT Department at a higher learning institution can get this right…
 
@@ -335,7 +335,7 @@ Things that are bad:
 
 ```
 
-[![](images/7mwvkhq2mj2thw.png)](images/7mwvkhq2mj2thw.png)
+[![](/images/7mwvkhq2mj2thw.png)](/images/7mwvkhq2mj2thw.png)
 
 ... They really make it too easy to clown on them.
 

@@ -1,6 +1,6 @@
 # Recipe: Chili
 
-[![](images/food/chili.jpg)](images/food/chili.jpg)
+[![](/images/food/chili.jpg)](/images/food/chili.jpg)
 
 <br>
 
@@ -52,4 +52,4 @@ In the future, I'll be exploring these ingredients further:
 
 <br>
 
-[![](images/food/chili-cheese.jpg)](images/food/chili-cheese.jpg)
+[![](/images/food/chili-cheese.jpg)](/images/food/chili-cheese.jpg)

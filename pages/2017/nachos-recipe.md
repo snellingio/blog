@@ -1,6 +1,6 @@
 # Recipe: Nachos
 
-[![](images/food/nachos-4.jpg)](images/food/nachos-4.jpg)
+[![](/images/food/nachos-4.jpg)](/images/food/nachos-4.jpg)
 
 <br>
 

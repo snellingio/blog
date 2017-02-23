@@ -33,7 +33,7 @@
 <hr />
 <p>Now that we understand a little more about how the business side of this works, let's take a look at what they can actually track. I'm going to take a fairly bare bones approach and just use my own ip address, and see what other deductions we can make from it. For the record, every single web request you make, you send your own ip address so that web servers know where to send you content, it’s a universal identifier which is core to the internet. Simply hiding advertisements doesn't prevent this, you must actually block the web request from happening.</p>
 <p>My public IP is <code>98.168.143.37</code> which you can easily get from just googling “what’s my ip.”</p>
-<p><a href="images/rzm0vq0gs3yiwq.png"><img src="images/rzm0vq0gs3yiwq.png" alt="whatsmyip.png" /></a></p>
+<p><a href="/images/rzm0vq0gs3yiwq.png"><img src="/images/rzm0vq0gs3yiwq.png" alt="" /></a></p>
 <hr />
 <p>Cool beans. So now I know that every web request I make on the internet, I send this ip <code>98.168.143.37</code> so that web servers know where to send content. One important thing to note is that most consumers probably have a “dynamic ip address” meaning that your internet service provider probably rotates this ip address ever 24-48 hours. Your internet service provider usually charges more money for static ip addresses which is where you keep the same ip forever.</p>
 <p>Okay, so we’ve established I send the same string of numbers as my address. What could someone find out about you from that string of numbers? Lucky for me, I subscribe to a fun service called MaxMind which they claim to be 80-90+% accurate.</p>
@@ -133,7 +133,7 @@
    }
 }</code></pre>
 <p>So each and every web request I make to any website, can find out my city, state, zip code, internet service provider, time zone, average city income, average population, and if I’m residential. Technically I’m in Oklahoma City a hundred miles north of Duncan, but other IP services actually get it right.</p>
-<p><a href="images/i8x89cwcqtp79q.png"><img src="images/i8x89cwcqtp79q.png" alt="ipinfo.png" /></a></p>
+<p><a href="/images/i8x89cwcqtp79q.png"><img src="/images/i8x89cwcqtp79q.png" alt="" /></a></p>
 <pre><code>curl ipinfo.io</code></pre>
 <pre><code>{
   "ip": "98.168.143.37",
@@ -147,7 +147,7 @@
   "phone": 405
 }</code></pre>
 <p>Okay, so what else can you find out from my ip address if you know my location? Let’s try out a quick inclusive wolfram search.</p>
-<p><a href="images/yirzkri3vdlftq.jpg"><img src="images/yirzkri3vdlftq.jpg" alt="wolfram.jpg" /></a></p>
+<p><a href="/images/yirzkri3vdlftq.jpg"><img src="/images/yirzkri3vdlftq.jpg" alt="" /></a></p>
 <p>Each and every web request I make, you can potentially find out county information, race and demographics information, educational attainment, income statistics, economic statistics, crime rates, etc. Not only that, you can link my data with other ip addresses within a certain geo radius.</p>
 <p>Wowee. So every request you make to an advertising network leaks all of that information. Think they aren’t doing this? Think again. Google Analytics allows demographic information for free! Imagine what advertising networks are collecting. Match up your ip information with your search history around the web over time, and now we’re talking about some serious data.</p>
 <p>Ask yourself this as well, do you think that government subpoenas are or aren’t being made to advertising networks, who hold troves of data?</p>
@@ -156,7 +156,7 @@
 <hr />
 <p><strong>Speed</strong></p>
 <p>Look at the graphic below, and then go read this article from where I took the graphic from: [<a href="https://www.raymond.cc/blog/10-ad-blocking-extensions-tested-for-best-performance/view-all/">https://www.raymond.cc/blog/10-ad-blocking-extensions-tested-for-best-performance/view-all/</a>]</p>
-<p><a href="images/w3gtswjmtrds6q.png"><img src="images/w3gtswjmtrds6q.png" alt="chrome_ad_blocker_combined_scores.png" /></a></p>
+<p><a href="/images/w3gtswjmtrds6q.png"><img src="/images/w3gtswjmtrds6q.png" alt="" /></a></p>
 <hr />
 <p><strong>Safety</strong> </p>
 <p>“Malvertising” is the use of online advertising to spread malware. This is typically where there is an exploit in your internet browser, and you download a virus by accident. </p>

@@ -63,13 +63,13 @@
 <li>Clicky Analytics</li>
 </ul>
 <p>Google Analytics gives a really good view of the statistical demographic of people who read the original report:
-<a href="images/quuulf90fuczew.png"><img src="images/quuulf90fuczew.png" alt="Screenshot 2015-02-24 19.15.20.png" /></a></p>
+<a href="/images/quuulf90fuczew.png"><img src="/images/quuulf90fuczew.png" alt="" /></a></p>
 <p>But, I was only interested in seeing if anyone at Oklahoma State read it.</p>
 <p>Clicky allows us to dig a little deeper and actually export JSON data from our our analytical report!
-<a href="images/kj4j6dhemn8gnw.png"><img src="images/kj4j6dhemn8gnw.png" alt="Screenshot 2015-02-24 19.16.25.png" /></a>
-<a href="images/cdtkjlfstqeua.png"><img src="images/cdtkjlfstqeua.png" alt="Screenshot 2015-02-24 19.12.28.png" /></a></p>
+<a href="/images/kj4j6dhemn8gnw.png"><img src="/images/kj4j6dhemn8gnw.png" alt="" /></a>
+<a href="/images/cdtkjlfstqeua.png"><img src="/images/cdtkjlfstqeua.png" alt="" /></a></p>
 <p>So now we have a list of IP addresses. Okay, but what do a bunch of little numbers tell us about who is reading the report? Now comes in the fun <code>nslookup</code> command. It allows us to query a DNS server and see if we can get a hostname for the IP.
-<a href="images/8pcdba4yu816a.png"><img src="images/8pcdba4yu816a.png" alt="Screenshot 2015-02-24 13.10.27.png" /></a></p>
+<a href="/images/8pcdba4yu816a.png"><img src="/images/8pcdba4yu816a.png" alt="" /></a></p>
 <p>Hah, turns out that all of the external OSU IP’s have a hostname. Perfect. </p>
 <p>Let’s write a little piece of code to iterate over the Clicky JSON export.</p>
 <pre><code>&lt;?php
