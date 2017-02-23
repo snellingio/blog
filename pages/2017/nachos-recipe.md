@@ -20,13 +20,13 @@ Stir until well mixed. You can bump up the heat if you think the beans are "wate
 
 <small>Note: The "scoop chips" are the secret here. [Tostito Oven Baked Scoops](http://www.fritolay.com/snacks/product-page/oven-baked/tostitos-oven-baked-scoops-tortilla-chips), or [Tostito Multigrain Scoops](http://www.fritolay.com/snacks/product-page/tostitos/tostitos-multigrain-scoops-tortilla-chips) are both great.</small>
 
-[![](images/food/nachos-1.jpg)](images/food/nachos-1.jpg)
+[![](/images/food/nachos-1.jpg)](/images/food/nachos-1.jpg)
 
 <br>
 
 ## 3. Flick refried beans over scoop chips.
 
-[![](images/food/nachos-2.jpg)](images/food/nachos-2.jpg)
+[![](/images/food/nachos-2.jpg)](/images/food/nachos-2.jpg)
 
 <br>
 
@@ -34,13 +34,13 @@ Stir until well mixed. You can bump up the heat if you think the beans are "wate
 
 <small>Is grinding the cheese worth it over the big bags of mixed cheese? Yes.</small>
 
-[![](images/food/nachos-3.jpg)](images/food/nachos-3.jpg)
+[![](/images/food/nachos-3.jpg)](/images/food/nachos-3.jpg)
 
 <br>
 
 ## 5. Place in 375F oven for 5-10 minutes, until cheese is melted.
 
-[![](images/food/nachos-4.jpg)](images/food/nachos-4.jpg)
+[![](/images/food/nachos-4.jpg)](/images/food/nachos-4.jpg)
 
 <br>
 
