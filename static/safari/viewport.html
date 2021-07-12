@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title></title>
+
+    <style>
+        html {
+            height: -webkit-fill-available;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+
+
+        header {
+            background-color: lightblue;
+            padding-top: env(safe-area-inset-top);
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: lightsalmon;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        p {
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <p>
+        Header
+    </p>
+</header>
+<main>
+    <p>
+        Main
+    </p>
+</main>
+<footer>
+    <p>
+        Footer
+    </p>
+</footer>
+</body>
+</html>
